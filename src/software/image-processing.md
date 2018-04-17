@@ -25,7 +25,7 @@ However, we have implemented in our program the different possible combinations 
 
 As a matter of conclusion, we send combination to the robot by ROS. 
 
-![z](/Pictures/image1.png)
+![z](/picture/software/image-processing/image1.png)
 #### Bill of materials: 
 
 - One Raspberry Pi zero W
@@ -47,49 +47,90 @@ As a matter of conclusion, we send combination to the robot by ROS.
 - Active WiFi and connect the GoPro to the Raspberry (if you use a USB Camera, don't forget to install the drive) 
 - Open terminal (***alt+ctrl+t***):
 	1) Install ROS by following this tutorial (see ROS chapter)
-	2) Import the repos from github : ``` git clone https://github.com/13055ecam/Color-detection-module ```
-	3) Go to "Color-detection-module" folder: ```cd Color-detection-module ```
-	4) For testing the camera, go to "test" folder : ```cd test ```
-		- For GoPro: ```python3 go_pro_test.py ``` (don't forget to connect the GoPro WiFi to the raspberry Pi !)
-		- For the webcam: ```python webcam_test.py ``` 
+	2) Import the repos from github : 
+		``` 
+		git clone https://github.com/13055ecam/Color-detection-module
+		```
+	3) Go to "Color-detection-module" folder: 
+		```
+		cd Color-detection-module 
+		```
+	4) For testing the camera, go to "test" folder : 
+		```
+		cd test
+		```
+		- For GoPro: 
+		```
+		python3 go_pro_test.py
+		``` 
+		Note:don't forget to connect the GoPro WiFi to the raspberry Pi !
+		- For the webcam: 
+		```
+		python webcam_test.py
+		``` 
 	
 **Scripts**
-- Go to color_detection folder ```cd ... ``` and ```cd color_detection```
-- Open GP_combination.sh ``` nano GP_combination.sh ```  
-- Change ***line3*** with the name of your GoPro WiFi (nmcli c up "your GoPro wifi")
-- Change ***line6*** with the name of WiFi (nmcli c up "your main wifi") and save it (***ctrl+x***)
-- Run this script on the terminal : ``` bash GP_combination.sh ``` 
-
-If you use the webcam : ```bash WB_combination.sh ```
-
+- Go to color_detection folder :
+```
+cd ... 
+cd color_detection
+```
+- Open GP_combination.sh :
+```
+nano GP_combination.sh 
+```  
+- Change ***line3*** with the name of your GoPro WiFi :
+```
+nmcli c up "your GoPro wifi"
+```
+- Change ***line6*** with the name of WiFi
+```
+nmcli c up "your main wifi"
+```
+and save it (***ctrl+x***)
+- Run this script on the terminal : 
+```
+bash GP_combination.sh 
+``` 
+If you use the webcam : 
+```
+bash WB_combination.sh 
+```
 You'll see 3 colors frames on the picture and the final combination color on the terminal)
 
 ##### Adjust position of a frame
 - Maintain your cursor where you want to place a side of the frame.
 - Take note of the position. 
 - Open a new tab (***ctrl+shift+t***)
-- Change the position in the code (nano color_detection.py)
-![before](/Pictures/image2.png)
+- Change the position in the code :
+```
+nano color_detection.py
+```
+![before](/picture/software/image-processing/image2.png)
 Note : xmin is the left side of the square, xmax is the right side of the square, ymin is the top side of the square and ymax is the bottom side of the square.
 - Restart for another side of the frame and save the file (***ctrl+x***)
 
-![after](/Pictures/image3.png)
-
-
+![after](/picture/software/image-processing/image3.png)
 
 ##### Adjust range color 
 - Maintain your cursor in the center of the cube 
 - Take note of the RGB color  
 - Open a new tab (***ctrl+shift+t***)
 - Change the color range in the code (color_detection.py) and save the file (***ctrl+x***)
-![z](/Pictures/image4.png)
+![z](/picture/software/image-processing/image4.png)
 
 ##### ROS
 
-You use ***ROS*** to send the color combination to another robot module
-- Open terminal and ```` roslaunch test4 test.launch ```` to launch ROS 
-- Open a new tab (***ctrl+shift+t***) and  run ```` rostopic echo /color_seq ```` to display messages published to a topic.
-
+You use ***ROS*** to send the color combination to another robot module :
+- Open terminal and launch ROS : 
+````
+roslaunch test4 test.launch 
+```` 
+- Open a new tab (***ctrl+shift+t***) and display messages published to a topic : 
+ 
+```` 
+rostopic echo /color_seq 
+````
 Note : don't forget to change frames positions and color ranges !
 ### Bonus : flashlight module
 
@@ -108,4 +149,7 @@ We added a LED flashlight above the camera because light is an important factor 
 We use pin 4 of the raspberry Pi zero to power the gate pin of IRF520 mosfet in order to control the light. The board is powered with a 5V power supply from the battery (pin 2 = 5V and pin 6= GND).
 
 #### Setup 
-- Run the code on the terminal: ```python flashlight.py```
+- Run the code on the terminal: 
+```
+python flashlight.py
+```
