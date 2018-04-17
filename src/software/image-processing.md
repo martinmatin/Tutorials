@@ -25,7 +25,7 @@ However, we have implemented in our program the different possible combinations 
 
 As a matter of conclusion, we send combination to the robot by ROS. 
 
-![z](/picture/software/image-processing/image1.png)
+![z](/img/software/image-processing/image1.png)
 #### Bill of materials: 
 
 - One Raspberry Pi zero W
@@ -106,18 +106,18 @@ You'll see 3 colors frames on the picture and the final combination color on the
 ```
 nano color_detection.py
 ```
-![before](/picture/software/image-processing/image2.png)
+![before](/img/software/image-processing/image2.png)
 Note : xmin is the left side of the square, xmax is the right side of the square, ymin is the top side of the square and ymax is the bottom side of the square.
 - Restart for another side of the frame and save the file (***ctrl+x***)
 
-![after](/picture/software/image-processing/image3.png)
+![after](/img/software/image-processing/image3.png)
 
 ##### Adjust range color 
 - Maintain your cursor in the center of the cube 
 - Take note of the RGB color  
 - Open a new tab (***ctrl+shift+t***)
 - Change the color range in the code (color_detection.py) and save the file (***ctrl+x***)
-![z](/picture/software/image-processing/image4.png)
+![z](/img/software/image-processing/image4.png)
 
 ##### ROS
 
