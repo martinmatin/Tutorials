@@ -1,5 +1,8 @@
 1/ présentation de l'envirronement      WILL
 2/ video Lars         will
+
+
+
 3/ synthèse de fct principale et guide des fct utiles non expliquées  WILL + PUIS
 
     fct: offset, sweep, apparence, pattern, mirror, fillet, chamfer, split, join
