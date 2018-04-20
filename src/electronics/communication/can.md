@@ -26,4 +26,16 @@ L'autre problème physique avec un nombre important de connexions est la résist
 
 ### Contexte d'apparition
 
+Les problèmes évoqués précédemment ont déjà été rencontrés il y a plusieurs années dans le milieu de l'automobile. En effet, au temps où l'électronique a fait son apparition dans les voitures, le nombre de composants intelligents n'ont cessé d'augmenter durant des années. Les composants électroniques étaient utilisés à tous les niveaux : 
+
+* Températures moteurs, air...
+* Régime moteur, vitesse engagées ...
+* Gyroscope, accéléromètre...
+* Contrôle sécurité, ABS, Airbag, portes ouvertes, ceintures...
+
+On se rend bien compte l'importance de l'électronique et au vu du nombre croissants de ces derniers, le câblage fut vite un vrai problème. Ainsi, BOSCH, a mis développé le CANBus pour répondre 
+
+
+
+# Liens utiles
 
