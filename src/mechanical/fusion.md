@@ -1,4 +1,4 @@
-# Getting in touch with Fusion360
+# 1. Getting in touch with Fusion360
 Fusion360 is a 3D modeling software used by many professionals and hobbyists to create pieces. You can directly send your models to slicers in order to print them or export the 2D plans to build it your own. The following few chapters should give you a global overview of how Fusion360 works and what you can use it for. We'll try to orient our writing to learn your to design in order to print your models later and will end with some tips about the printing of your designs.
 
 To complete your learning we strongly recommend you subscribe to <a href="https://www.youtube.com/channel/UCo29kn3d9ziFUZGZ50VKvWA">Lars Christensen's Youtube channel</a>. He's a master in the use of Fusion360 and has very well made videos about every problem of question you might have.
@@ -20,12 +20,13 @@ The first window you get when opening Fusion360 for the first time should be thi
 
 We'll let you listen to M.Christensen by clicking on the links of the videos we gave earlier to learn the basics of Fusion360. He's an expert on the subject and honestly the only good way to learn the kind of software is by watching someone do and copy. Please don't learn the shortcuts by heart, you'll learn the most used ones by practicing.
 
-# Main Functions and Shotcuts
-To begin with, we would like to remind you that all function are easily available trough the "s" key shortcut. Just type some word related on what you are searching for and we are pretty sure that you'll find it fast.
+# 2. Main Functions and Shotcuts
+You should already be able to do your first model now but in case of you misted some of the multiple things explained by "Lars", we would like to give you a quick refresh.
 
-## Shortcuts
-Still, it very practicle to know some shortcuts. You'll find them here:
+To begin with, note that all function are easily available trough the "s" key shortcut. Just type some word related on what you are searching for and we are pretty sure that you'll find it fast. *Note that you can save them by clicking on the curved arrow.*
 
+## 2.1. Shortcuts
+You don't have to study them but with your first hour of practice you should already know them. If it's still not the case, you'll find them here:
 - S=Model Toolbox
 
 
@@ -44,8 +45,7 @@ Still, it very practicle to know some shortcuts. You'll find them here:
 - center btn = Pan (move the view)
 - Maj+ center btn  = 3D move
 
-## Useful functions
-
+## 2.2. Useful functions
 
 ### Offset
 Offset is a very handy tool when it comes to draw parallel lines.
@@ -94,7 +94,14 @@ In the 3D model, just select the ridge and with the arrow or value chose the siz
 <img src="../img/mechanical/Fillet_4.png" alt="Fillet_2" style="width: 200px;height:200px"/>
 
 ### Chamfer
-
+In the same way of thinking than for the Fillet, you'll have the possibility to make some Chamfer.
+![caca](../img/mechanical/Chamfer_1.png)
+Select the tools and click on the ridge.
+![caca](../img/mechanical/Chamfer_2.png)
+You'll also be able to do it with a curved ridge (the one made with fillet)
+![caca](../img/mechanical/Chamfer_3.png)
+![caca](../img/mechanical/Chamfer_4.png)
+*Note that in this case you'll be limited by the angle of the previous made fillet.*
 
 ### Split
 
@@ -102,8 +109,27 @@ In the 3D model, just select the ridge and with the arrow or value chose the siz
 ### Join
 
 
+## 3. Importance: dif bodies vs components       PUISS
+      attention séléction du bon compo quand nouveau sketch
+      link d'un dessin vers un autre
+
+## 4. modification de fichier + stl vers 3D      PUISS
+
+## 5. canvas et svg        will
+
+## 6. export du design vers plan et/ou slicer    WILL + PUISS
+
+## 7. spécificité pour impression 3D     PUISS
+              sens de fibres
+              penser support et nettoyage de support
+              penser face sur le bed
+              combine de dif elem pour impression monobloc
+
+## 8. parametre d'impression et défaut d'impression      PUISS
+
+## 9. tour de marché sur les différentes imprimantes sur le marché      PUISS + WILL
 
 
-#### Contributor
+## Contributor
 - Puissant Baeyens Victor, 12098, [MisterTarock](https://github.com/MisterTarock)
 - De Decker William, 14130, [WilliamHdd](https://github.com/WilliamHdd)
