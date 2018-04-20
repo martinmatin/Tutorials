@@ -5,7 +5,7 @@ This is a draft of the tutorial, not the last version so all the instructions ar
 
 For the «Cortex» robot we used four sensors, one on each side so that’s what the final code is based on.
 
-In this code we are going to include the same libraries as shown in the Publisher Tutorial so you can refer to that part for the explanations.
+In this code we are going to include the same libraries as shown in the Arduino Publisher Tutorial so you can refer to that part for the explanations.
 Another useful library used for the sensors is the NewPing.h. So here are all the necessary libraries :
 ```
 #include <ros.h>
@@ -27,11 +27,11 @@ NewPing sonarR(TRIGGER_PINR, ECHO_PINR, MAX_DISTANCE);
 ```
 where you specify the pins and the maximum distance defined previously.
 
-Moreover as mentioned in the Publisher Tutorial you specify the type of the ultrasound message and then name you want to assign to it :
+Moreover as mentioned in the Arduino Publisher Tutorial you specify the type of the ultrasound message and then name you want to assign to it :
 ```
 sensor_msgs::Range range_msg_right;
 ```
-The following has also been explained in the Publisher Tutorial :
+The following has also been explained in the Arduino Publisher Tutorial :
 ```
 ros::Publisher pub_range4("ultrasound_right", &range_msg_right);
 ```
