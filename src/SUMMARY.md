@@ -24,6 +24,7 @@
         - [Install](software/ros/install.md)
         - [Basic concepts](software/ros/basics/basics.md)
             - [Workspace setup](software/ros/basics/workspace.md)
+            - [Packages](software/ros/basics/packages.md)
             - [Subscriber](software/ros/basics/sub.md)
             - [Publisher](software/ros/basics/pub.md)
             - [Launchfiles](software/ros/basics/launch.md)
