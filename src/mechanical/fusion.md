@@ -20,16 +20,42 @@ The first window you get when opening Fusion360 for the first time should be thi
 
 We'll let you listen to M.Christensen by clicking on the links of the videos we gave earlier to learn the basics of Fusion360. He's an expert on the subject and honestly the only good way to learn the kind of software is by watching someone do and copy. Please don't learn the shortcuts by heart, you'll learn the most used ones by practicing.
 
-# Useful functions
+# Main Functions and Shotcuts
+To begin with, we would like to remind you that all function are easily available trough the "s" key shortcut. Just type some word related on what you are searching for and we are pretty sure that you'll find it fast.
 
-## Offset
-  Offset is a very useful tools that gives you the opportunity to use a line as a reference when editing a sketch.
-  It comes in handy for tracing parallel lines for example. 
-## Sweep
-## Appearance
-## Pattern
-## Mirror
-## Fillet
-## Chamfer
-## Split
-## Join
+## Shortcuts
+Still, it very practicle to know some shortcuts by heart. You'll find them here:
+
+- S=Model Toolbox
+
+- L=Line
+- C=Circle
+- X=Construction
+- D=Dimension
+
+- Q=Push/Pull
+- M=Move
+
+- J=Joint
+- T=Trim (delete some lines)
+
+- center btn = Pan (move the view)
+- Maj+ center btn  = 3D move
+
+## Useful functions
+
+
+### Offset
+### Sweep
+### Appearance
+### Pattern
+### Mirror
+### Fillet
+### Chamfer
+### Split
+### Join
+
+
+#### Contributor
+- Puissant Baeyens Victor, 12098, [MisterTarock](https://github.com/MisterTarock)
+- De Decker William, 14130, [WilliamHdd](https://github.com/WilliamHdd)
