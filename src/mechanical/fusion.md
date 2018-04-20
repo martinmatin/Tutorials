@@ -106,9 +106,8 @@ It only works with volumes and you have to enable the display of the sketch your
 As you used it in Autocad or similars, Fillet allow you to joint two lines to make one curve.
 In Fusion 360, as a 3D software, you'll also find the possibility to "curve" your 3D model.
 ![img](../img/mechanical/Fillet_1.png)
-<figure>
-  <figcaption>Fig. - First Fillet is for sketck and the second one for 3D model.</figcaption>
-</figure>
+Fig. - First Fillet is for sketck and the second one for 3D model.
+
 
 To use the sketch fillet, just select it and then click on the two lines to join.
 ![img](../img/mechanical/Fillet_2.png)
