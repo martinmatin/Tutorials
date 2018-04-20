@@ -24,7 +24,7 @@ We'll let you listen to M.Christensen by clicking on the links of the videos we 
 
 ## Offset
   Offset is a very useful tools that gives you the opportunity to use a line as a reference when editing a sketch.
-  It comes in handy for tracing parallel lines for example 
+  It comes in handy for tracing parallel lines for example. 
 ## Sweep
 ## Appearance
 ## Pattern
