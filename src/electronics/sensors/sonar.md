@@ -53,7 +53,8 @@ pub_range4.publish(&range_msg_right);
 ```
 Here is the whole code for four ultrasound sensors based on the one presented in this link :
 <https://www.youtube.com/watch?v=gm3e-51ohgQ>
-```
+
+```
 #include <ros.h>
 #include <sensor_msgs/Range.h>
 #include <NewPing.h>
@@ -78,9 +79,7 @@ NewPing sonarB(TRIGGER_PINB, ECHO_PINB, MAX_DISTANCE); // left us
 NewPing sonarF(TRIGGER_PINF, ECHO_PINF, MAX_DISTANCE); // right us
 
 ros::NodeHandle  nh;
- 
 
- 
 sensor_msgs::Range range_msg_rear;
 sensor_msgs::Range range_msg_front;
 sensor_msgs::Range range_msg_left;
