@@ -24,20 +24,22 @@ We'll let you listen to M.Christensen by clicking on the links of the videos we 
 To begin with, we would like to remind you that all function are easily available trough the "s" key shortcut. Just type some word related on what you are searching for and we are pretty sure that you'll find it fast.
 
 ## Shortcuts
-Still, it very practicle to know some shortcuts by heart. You'll find them here:
+Still, it very practicle to know some shortcuts. You'll find them here:
 
 - S=Model Toolbox
+
 
 - L=Line
 - C=Circle
 - X=Construction
 - D=Dimension
 
+
 - Q=Push/Pull
 - M=Move
-
 - J=Joint
 - T=Trim (delete some lines)
+
 
 - center btn = Pan (move the view)
 - Maj+ center btn  = 3D move
@@ -55,12 +57,15 @@ key to open the "offset menu", you then have to select the reference line you wa
 You'll end with the line/shape you selected offset as you wanted.
 ![caca](../img/mechanical/Offset_finish.png)
 ### Sweep
+
+
 ### Revolve
 Revolve allows you to create object as if you turned them on a lathe. It comes in handy to make wheels, cannons, ...
 To used it you have to first create a shape around an axis. When you create that shape, you have to imagine it round. So you only have to draw "a half cut in your future object".
 ![caca](../img/mechanical/Vase_shape.png)
 Type "s" to access the "search menu" and enter "revolve" to see the tool. You'll have to select the shape and the axis you want and press "enter".
 ![caca](../img/mechanical/vase_glass.png)
+
 ### Appearance
 To make design easier for others to imagine or simply to choose colors and material purely esthetically, the "Appearance" tool is a must! You can archive more or less the same result with the "Physical Material" tool, but this is more often used for simulation. You can also combine those tools to get for example a steel pipe covered in leather without having to create the wrapping in a component.
 It is also very handy when creating complex assemblies with little pieces because the different appearance help to see those different pieces.
@@ -98,9 +103,28 @@ It only works with volumes and you have to enable the display of the sketch your
 ### Mirror
 
 ### Fillet
+As you used it in Autocad or similars, Fillet allow you to joint two lines to make one curve.
+In Fusion 360, as a 3D software, you'll also find the possibility to "curve" your 3D model.
+<figure>
+  <img src="../img/mechanical/Fillet_1.png" alt="Fillet_1" style="width: 200px;height:200px"/>
+  <figcaption>Fig1. - First Fillet is for sketck and the second one for 3D model.</figcaption>
+</figure>
+To use the sketch fillet, just select it and then click on the two lines to join.
+<img src="../img/mechanical/Fillet_2.png" alt="Fillet_2" style="width: 200px;height:200px"/>
+
+In the 3D model, just select the ridge and with the arrow or value chose the size of your fillet.
+<img src="../img/mechanical/Fillet_3.png" alt="Fillet_2" style="width: 200px;height:200px"/>
+<img src="../img/mechanical/Fillet_4.png" alt="Fillet_2" style="width: 200px;height:200px"/>
+
 ### Chamfer
+
+
 ### Split
+
+
 ### Join
+
+
 
 
 #### Contributor
