@@ -105,16 +105,17 @@ It only works with volumes and you have to enable the display of the sketch your
 ### Fillet
 As you used it in Autocad or similars, Fillet allow you to joint two lines to make one curve.
 In Fusion 360, as a 3D software, you'll also find the possibility to "curve" your 3D model.
+![caca](../img/mechanical/Fillet_1.png)
 <figure>
-  <img src="../img/mechanical/Fillet_1.png" alt="Fillet_1" style="width: 200px;height:200px"/>
-  <figcaption>Fig1. - First Fillet is for sketck and the second one for 3D model.</figcaption>
+  <figcaption>Fig. - First Fillet is for sketck and the second one for 3D model.</figcaption>
 </figure>
+
 To use the sketch fillet, just select it and then click on the two lines to join.
-<img src="../img/mechanical/Fillet_2.png" alt="Fillet_2" style="width: 200px;height:200px"/>
+![caca](../img/mechanical/Fillet_2.png)
 
 In the 3D model, just select the ridge and with the arrow or value chose the size of your fillet.
-<img src="../img/mechanical/Fillet_3.png" alt="Fillet_2" style="width: 200px;height:200px"/>
-<img src="../img/mechanical/Fillet_4.png" alt="Fillet_2" style="width: 200px;height:200px"/>
+![caca](../img/mechanical/Fillet_3.png)
+![caca](../img/mechanical/Fillet_4.png)
 
 ### Chamfer
 In the same way of thinking than for the Fillet, you'll have the possibility to make some Chamfer.
