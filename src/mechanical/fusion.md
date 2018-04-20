@@ -13,3 +13,31 @@ The first window you get when opening Fusion360 for the first time should be thi
  By clicking on ![caca](../img/mechanical/square.png) you access to the repository holding all your folders.
  A good practice is to sort them into other repositories according to their relevance.
  ![FOLDERS](../img/mechanical/FOLDERS.png)
+
+## Main Functions and Shotcuts
+To begin with, we would like to remind you that all function are easily available trough the "s" key shortcut. Just type some word related on what you are searching for and we are pretty sure that you'll find it fast.
+
+Still, it very practicle to know some shortcuts by heart. You'll find them here:
+
+- S=Model Toolbox
+
+- L=Line
+- C=Circle
+- X=Construction
+- D=Dimension
+
+- Q=Push/Pull
+- M=Move
+
+- J=Joint
+- T=Trim (delete some lines)
+
+- center btn = Pan (move the view)
+- Maj+ center btn  = 3D move
+
+
+
+
+# Contributor
+- Puissant Baeyens Victor, 12098, [MisterTarock](https://github.com/MisterTarock)
+- De Decker William, 14130, [WilliamHdd](https://github.com/WilliamHdd)
