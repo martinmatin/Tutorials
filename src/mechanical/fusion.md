@@ -48,8 +48,28 @@ Still, it very practicle to know some shortcuts. You'll find them here:
 
 
 ### Offset
+Offset is a very handy tool when it comes to draw parallel lines.
+![caca](../img/mechanical/Offset1.png)
+
+The tools works only in sketch mode and you have to already have a reference line (or a shape). Type the "o"
+key to open the "offset menu", you then have to select the reference line you want. You can either drag and drop the cursor with your mouse or type the value you wish the offset to be.
+![caca](../img/mechanical/Offset_drag.png)![caca](../img/mechanical/OFFSET_VALUE.png)
+You'll end with the line/shape you selected offset as you wanted.
+![caca](../img/mechanical/Offset_finish.png)
 ### Sweep
+### Revolve
+Revolve allows you to create object as if you turned them on a lathe. It comes in handy to make wheels, cannons, ...
+To used it you have to first create a shape around an axis. When you create that shape, you have to imagine it round. So you only have to draw "a half cut in your future object".
+![caca](../img/mechanical/Vase_shape.png)
+Type "s" to access the "search menu" and enter "revolve" to see the tool. You'll have to select the shape and the axis you want and press "enter".
+![caca](../img/mechanical/vase_glass.png)
 ### Appearance
+To make design easier for others to imagine or simply to choose colors and material purely esthetically, the "Appearance" tool is a must! You can archive more or less the same result with the "Physical Material" tool, but this is more often used for simulation. You can also combine those tools to get for example a steel pipe covered in leather without having to create the wrapping in a component.
+It is also very handy when creating complex assemblies with little pieces because the different appearance help to see those different pieces.
+
+Appearance is really easy to use. Type "a", choose the look you like and drag-drop it on the body you want. You can directly drop it in the project tree or on the visual objet.  
+![caca](../img/mechanical/Appearance_tool.png)
+
 ### Pattern
 ### Mirror
 ### Fillet
