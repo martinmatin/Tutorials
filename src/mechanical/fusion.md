@@ -10,13 +10,13 @@ To complete your learning we strongly recommend you subscribe to <a href="https:
 The first window you get when opening Fusion360 for the first time should be this.
 
 
- By clicking on ![caca](../img/mechanical/square.png) you access to the repository holding all your folders.
+ By clicking on ![img](../img/mechanical/square.png) you access to the repository holding all your folders.
  A good practice is to sort them into other repositories according to their relevance.
  ![FOLDERS](../img/mechanical/FOLDERS.png)
 
 ## Project view
 
-![caca](../img/mechanical/Fusion1.png)
+![img](../img/mechanical/Fusion1.png)
 
 We'll let you listen to M.Christensen by clicking on the links of the videos we gave earlier to learn the basics of Fusion360. He's an expert on the subject and honestly the only good way to learn the kind of software is by watching someone do and copy. Please don't learn the shortcuts by heart, you'll learn the most used ones by practicing.
 
@@ -49,55 +49,55 @@ You don't have to study them but with your first hour of practice you should alr
 
 ### Offset
 Offset is a very handy tool when it comes to draw parallel lines.
-![caca](../img/mechanical/Offset1.png)
+![img](../img/mechanical/Offset1.png)
 
 The tools works only in sketch mode and you have to already have a reference line (or a shape). Type the "o"
 key to open the "offset menu", you then have to select the reference line you want. You can either drag and drop the cursor with your mouse or type the value you wish the offset to be.
-![caca](../img/mechanical/Offset_drag.png)![caca](../img/mechanical/OFFSET_VALUE.png)
+![img](../img/mechanical/Offset_drag.png)![caca](../img/mechanical/OFFSET_VALUE.png)
 You'll end with the line/shape you selected offset as you wanted.
-![caca](../img/mechanical/Offset_finish.png)
+![img](../img/mechanical/Offset_finish.png)
 ### Sweep
 
 
 ### Revolve
 Revolve allows you to create object as if you turned them on a lathe. It comes in handy to make wheels, cannons, ...
 To used it you have to first create a shape around an axis. When you create that shape, you have to imagine it round. So you only have to draw "a half cut in your future object".
-![caca](../img/mechanical/Vase_shape.png)
+![img](../img/mechanical/Vase_shape.png)
 Type "s" to access the "search menu" and enter "revolve" to see the tool. You'll have to select the shape and the axis you want and press "enter".
-![caca](../img/mechanical/vase_glass.png)
+![img](../img/mechanical/vase_glass.png)
 
 ### Appearance
 To make design easier for others to imagine or simply to choose colors and material purely esthetically, the "Appearance" tool is a must! You can archive more or less the same result with the "Physical Material" tool, but this is more often used for simulation. You can also combine those tools to get for example a steel pipe covered in leather without having to create the wrapping in a component.
 It is also very handy when creating complex assemblies with little pieces because the different appearance help to see those different pieces.
 
 Appearance is really easy to use. Type "a", choose the look you like and drag-drop it on the body you want. You can directly drop it in the project tree or on the visual objet.  
-![caca](../img/mechanical/Appearance_tool.png)
+![img](../img/mechanical/Appearance_tool.png)
 
 ### Pattern
 Real time savior, "Pattern" allows you to duplicate sketches, bodies and components on a given distance.
 Multiple pattern tools exists. To see then go into the "search menu" and type "Pattern".
-![caca](../img/mechanical/multiple_patterns.png)
+![img](../img/mechanical/multiple_patterns.png)
 As you can see in the above picture, you can create a circular, rectangular or "free style" pattern.
 For both rectangular and circular patterns the ones with white square create pattern in sketches. The grey ones create patterns of volumes (bodies, components). We'll only present the sketch pattern, but the volumes work in a similar way.
 #### Rectangular pattern
-![caca](../img/mechanical/Pattern_open.png)
+![img](../img/mechanical/Pattern_open.png)
 To apply rectangular patterns, select the desired shape and the amount of copies you want in the 2 directions. You can then enter (or drag-drop) the distance on which you want to copy that shape for both directions and click "ok".
-![caca](../img/mechanical/Rect_patt_1side.png)
-![caca](../img/mechanical/Rect_patt_2side.png)
-![caca](../img/mechanical/Rect_pattern_done.png)
+![img](../img/mechanical/Rect_patt_1side.png)
+![img](../img/mechanical/Rect_patt_2side.png)
+![img](../img/mechanical/Rect_pattern_done.png)
 #### Circular pattern
 Circular patterns work in a similar way accept the fact you have to choose a center point and you can choose to make a complete revolution around it you on a given angle.
-![caca](../img/mechanical/circ_patt-full.png)
-![caca](../img/mechanical/circ_patt_angle.png)
+![img](../img/mechanical/circ_patt-full.png)
+![img](../img/mechanical/circ_patt_angle.png)
 
 #### On path
 
 The 'On path pattern' tools allows you to create patterns that are nor circular, nor rectangular.
 It only works with volumes and you have to enable the display of the sketch your path is in.
 
-![caca](../img/mechanical/patt_onpath_start.png)
-![caca](../img/mechanical/Patt_ontpath_last.png)
-![caca](../img/mechanical/Patt_onpath_done.png)
+![img](../img/mechanical/patt_onpath_start.png)
+![img](../img/mechanical/Patt_ontpath_last.png)
+![img](../img/mechanical/Patt_onpath_done.png)
 
 
 ### Mirror
@@ -105,26 +105,26 @@ It only works with volumes and you have to enable the display of the sketch your
 ### Fillet
 As you used it in Autocad or similars, Fillet allow you to joint two lines to make one curve.
 In Fusion 360, as a 3D software, you'll also find the possibility to "curve" your 3D model.
-![caca](../img/mechanical/Fillet_1.png)
+![img](../img/mechanical/Fillet_1.png)
 <figure>
   <figcaption>Fig. - First Fillet is for sketck and the second one for 3D model.</figcaption>
 </figure>
 
 To use the sketch fillet, just select it and then click on the two lines to join.
-![caca](../img/mechanical/Fillet_2.png)
+![img](../img/mechanical/Fillet_2.png)
 
 In the 3D model, just select the ridge and with the arrow or value chose the size of your fillet.
-![caca](../img/mechanical/Fillet_3.png)
-![caca](../img/mechanical/Fillet_4.png)
+![img](../img/mechanical/Fillet_3.png)
+![img](../img/mechanical/Fillet_4.png)
 
 ### Chamfer
 In the same way of thinking than for the Fillet, you'll have the possibility to make some Chamfer.
-![caca](../img/mechanical/Chamfer_1.png)
+![img](../img/mechanical/Chamfer_1.png)
 Select the tools and click on the ridge.
-![caca](../img/mechanical/Chamfer_2.png)
+![img](../img/mechanical/Chamfer_2.png)
 You'll also be able to do it with a curved ridge (the one made with fillet)
-![caca](../img/mechanical/Chamfer_3.png)
-![caca](../img/mechanical/Chamfer_4.png)
+![img](../img/mechanical/Chamfer_3.png)
+![img](../img/mechanical/Chamfer_4.png)
 *Note that in this case you'll be limited by the angle of the previous made fillet.*
 
 ### Split
