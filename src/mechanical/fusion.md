@@ -10,5 +10,6 @@ To complete your learning we strongly recommend you subscribe to <a href="https:
 The first window you get when opening Fusion360 for the first time should be this.
 
 ![caca](../img/mechanical/Fusion1.png)
- By clicking on ![caca](../img/mechanical/square.png) you access to your folders. You can open other designs
-by simply clicking on them. 
+ By clicking on ![caca](../img/mechanical/square.png) you access to the repository holding all your folders.
+ A good practice is to sort them into other repositories according to their relevance.
+ ![FOLDERS](../img/mechanical/FOLDERS.png)
