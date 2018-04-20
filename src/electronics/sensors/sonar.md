@@ -17,7 +17,7 @@ Then you have to define the pins for each sensor and the ultrasound sensor has t
 #define TRIGGER_PINR  5
 #define ECHO_PINR    4   
 ```
-You also have to specify the maximum distance you want the sensor to still be able to detect through :
+You also have to specify the maximum distance at which you want the sensor to still be able to detect :
 ```
 #define MAX_DISTANCE 300
 ```
