@@ -24,20 +24,22 @@ We'll let you listen to M.Christensen by clicking on the links of the videos we 
 To begin with, we would like to remind you that all function are easily available trough the "s" key shortcut. Just type some word related on what you are searching for and we are pretty sure that you'll find it fast.
 
 ## Shortcuts
-Still, it very practicle to know some shortcuts by heart. You'll find them here:
+Still, it very practicle to know some shortcuts. You'll find them here:
 
 - S=Model Toolbox
+
 
 - L=Line
 - C=Circle
 - X=Construction
 - D=Dimension
 
+
 - Q=Push/Pull
 - M=Move
-
 - J=Joint
 - T=Trim (delete some lines)
+
 
 - center btn = Pan (move the view)
 - Maj+ center btn  = 3D move
@@ -51,6 +53,22 @@ Still, it very practicle to know some shortcuts by heart. You'll find them here:
 ### Pattern
 ### Mirror
 ### Fillet
+As you used it in Autocad or similars, Fillet allow you to joint two lines to make one curve.
+In Fusion 360, as a 3D software, you'll also find the possibility to "curve" your 3D model.
+<figure>
+  <img src="../img/mechanical/Fillet_1.png" alt="Fillet_1" style="width: 200px;height:200px"/>
+  <figcaption>Fig1. - First Fillet is for sketck and the second one for 3D model.</figcaption>
+</figure>
+To use the sketch fillet, just select it and then click on the two lines to join.
+<img src="../img/mechanical/Fillet_2.png" alt="Fillet_2" style="width: 200px;height:200px"/>
+
+In the 3D model, just select the ridge and with the arrow or value chose the size of your fillet.
+<img src="../img/mechanical/Fillet_3.png" alt="Fillet_2" style="width: 200px;height:200px"/>
+<img src="../img/mechanical/Fillet_4.png" alt="Fillet_2" style="width: 200px;height:200px"/>
+
+
+
+
 ### Chamfer
 ### Split
 ### Join
