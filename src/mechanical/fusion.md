@@ -9,7 +9,26 @@ To complete your learning we strongly recommend you subscribe to <a href="https:
 ## Fusion360 environment
 The first window you get when opening Fusion360 for the first time should be this.
 
-![caca](../img/mechanical/Fusion1.png)
+
  By clicking on ![caca](../img/mechanical/square.png) you access to the repository holding all your folders.
  A good practice is to sort them into other repositories according to their relevance.
  ![FOLDERS](../img/mechanical/FOLDERS.png)
+
+## Project view
+
+![caca](../img/mechanical/Fusion1.png)
+
+We'll let you listen to M.Christensen by clicking on the links of the videos we gave earlier to learn the basics of Fusion360. He's an expert on the subject and honestly the only good way to learn the kind of software is by watching someone do and copy. Please don't learn the shortcuts by heart, you'll learn the most used ones by practicing.
+
+# Useful functions
+
+
+## Offset
+## Sweep
+## Appearance
+## Pattern
+## Mirror
+## Fillet
+## Chamfer
+## Split
+## Join
