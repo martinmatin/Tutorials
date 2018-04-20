@@ -74,10 +74,33 @@ Appearance is really easy to use. Type "a", choose the look you like and drag-dr
 ![caca](../img/mechanical/Appearance_tool.png)
 
 ### Pattern
+Real time savior, "Pattern" allows you to duplicate sketches, bodies and components on a given distance.
+Multiple pattern tools exists. To see then go into the "search menu" and type "Pattern".
+![caca](../img/mechanical/multiple_patterns.png)
+As you can see in the above picture, you can create a circular, rectangular or "free style" pattern.
+For both rectangular and circular patterns the ones with white square create pattern in sketches. The grey ones create patterns of volumes (bodies, components). We'll only present the sketch pattern, but the volumes work in a similar way.
+#### Rectangular pattern
+![caca](../img/mechanical/Pattern_open.png)
+To apply rectangular patterns, select the desired shape and the amount of copies you want in the 2 directions. You can then enter (or drag-drop) the distance on which you want to copy that shape for both directions and click "ok".
+![caca](../img/mechanical/Rect_patt_1side.png)
+![caca](../img/mechanical/Rect_patt_2side.png)
+![caca](../img/mechanical/Rect_pattern_done.png)
+#### Circular pattern
+Circular patterns work in a similar way accept the fact you have to choose a center point and you can choose to make a complete revolution around it you on a given angle.
+![caca](../img/mechanical/circ_patt-full.png)
+![caca](../img/mechanical/circ_patt_angle.png)
+
+#### On path
+
+The 'On path pattern' tools allows you to create patterns that are nor circular, nor rectangular.
+It only works with volumes and you have to enable the display of the sketch your path is in.
+
+![caca](../img/mechanical/patt_onpath_start.png)
+![caca](../img/mechanical/Patt_ontpath_last.png)
+![caca](../img/mechanical/Patt_onpath_done.png)
 
 
 ### Mirror
-
 
 ### Fillet
 As you used it in Autocad or similars, Fillet allow you to joint two lines to make one curve.
