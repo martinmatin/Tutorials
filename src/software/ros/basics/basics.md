@@ -1,4 +1,11 @@
 # Ros
+ROS starts with the ROS Master. The Master allows all other ROS pieces of software (Nodes) to find and talk to each other. That way, we do not have to ever specifically state “Send this sensor data to that computer at 127.0.0.1. We can simply tell Node 1 to send messages to Node 2. But... how do Nodes do this? By publishing and subscribing to `TOPICS`.
+
+The ROS Master provides name registration and lookup to the rest of the Computation Graph.
+
+![alt text](http://www.clearpathrobotics.com/assets/guides/ros/_images/ros101one.png "ROS GRAPH")
+
+> This content is based on [Clearpath Robotics](https://www.clearpathrobotics.com/) documentation. For further information refer to their [ROS Tutorials](http://www.clearpathrobotics.com/assets/guides/ros/Intro%20to%20the%20Robot%20Operating%20System.html).
 
 # Nodes
 
