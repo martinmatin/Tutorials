@@ -11,15 +11,13 @@ catkin_create_pkg my_awesome_code rospy
 ```
 This creates a new package named **my_awesome_code**. Inside that folder we'll find a **/src** directory where we will put our python code.
 
-## roscore
+## Complementary info
+### roscore
 The `roscore` command is a service that provides connection information to nodes so that they can transmit messages to one another. **It is necessary to run this command before launching any package**.
 
-## rosrun
+### rosrun
 To run a package, we use the `rosrun` command executed like this:
 ```
 rosrun PACKAGE EXECUTABLE [ARGS]
 ```
 **PACKAGE** is the name of the created package, for example **my_awesome_code**, and **EXECUTABLE** is the name of the python file containing the code. **Attention!** The python file needs to be executable, juste use `sudo chmod +x file.py`
-
-## Example
-The default ROS installation provides an example project, with name **rospy_tutorials** and executable **talker**.
