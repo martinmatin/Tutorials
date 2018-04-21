@@ -18,7 +18,7 @@ Now we need to write the image file onto the microSD card.
 
 On **Windows** we can use [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/). 
 
-![Win32DiskImager](../../img/software/ros/win32diskimager01.png)
+![Win32DiskImager](../img/software/ros/win32diskimager01.png)
 
 On **Linux** we use the `dd` command.
 
