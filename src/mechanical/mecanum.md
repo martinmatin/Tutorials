@@ -1,6 +1,6 @@
 # Mecanum wheels
 
-![Image of Mecanum Wheel](../img/mechanical/mecanum/mecanum.jpg)
+![](img/mechanical/mecanum/mecanum.jpg)
 
 A mecanum wheel is a wheel with rollers attached at its circumference at an angle of typically 45°.
 When four mecanum wheels are used together, we can achieve a net resulting direction in **any** direction by varying the direction and speed of rotation of the wheels.
@@ -22,7 +22,7 @@ We decided to 3D print our own as a replacement. The [STL file for this part can
 When assembling the wheels onto the robot, we need to pay attention to their orientation.
 If we look from the top view, the rollers should all point to the center of the base.
 
-![](../img/mechanical/mecanum/mecanum-orientation.png)
+![](img/mechanical/mecanum/mecanum-orientation.png)
 
 ## Kinematics
 
