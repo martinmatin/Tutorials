@@ -53,7 +53,7 @@ Offset is a very handy tool when it comes to draw parallel lines.
 
 The tools works only in sketch mode and you have to already have a reference line (or a shape). Type the "o"
 key to open the "offset menu", you then have to select the reference line you want. You can either drag and drop the cursor with your mouse or type the value you wish the offset to be.
-![img](../img/mechanical/Offset_drag.png)![caca](../img/mechanical/OFFSET_VALUE.png)
+![img](../img/mechanical/Offset_drag.png)![img](../img/mechanical/OFFSET_VALUE.png)
 You'll end with the line/shape you selected offset as you wanted.
 ![img](../img/mechanical/Offset_finish.png)
 ### Sweep
@@ -127,33 +127,3 @@ You'll also be able to do it with a curved ridge (the one made with fillet)
 ![img](../img/mechanical/Chamfer_4.png)
 *Note that in this case you'll be limited by the angle of the previous made fillet.*
 
-### Split
-
-
-### Join
-
-
-## 3. Importance: dif bodies vs components       PUISS
-      attention séléction du bon compo quand nouveau sketch
-      link d'un dessin vers un autre
-
-## 4. modification de fichier + stl vers 3D      PUISS
-
-## 5. canvas et svg        will
-
-## 6. export du design vers plan et/ou slicer    WILL + PUISS
-
-## 7. spécificité pour impression 3D     PUISS
-              sens de fibres
-              penser support et nettoyage de support
-              penser face sur le bed
-              combine de dif elem pour impression monobloc
-
-## 8. parametre d'impression et défaut d'impression      PUISS
-
-## 9. tour de marché sur les différentes imprimantes sur le marché      PUISS + WILL
-
-
-## Contributor
-- Puissant Baeyens Victor, 12098, [MisterTarock](https://github.com/MisterTarock)
-- De Decker William, 14130, [WilliamHdd](https://github.com/WilliamHdd)
