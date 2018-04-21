@@ -38,32 +38,25 @@ As a matter of conclusion, we send combination to the robot by ROS.
 - No pins required  
 
 #### Setup 
-- Download last version Ubuntu mate (16.04) or an another distribution for the raspberry which is compatible with ROS.
-(https://www.raspberrypi.org/downloads/)
-- To install the distribution : 
-	1) Open Etcher
-	2) Select your image previously
-	3) Connect a drive (Fat 32) and flash your SD Card 
-- Active WiFi and connect the GoPro to the Raspberry (if you use a USB Camera, don't forget to install the drive) 
-- Open terminal (***alt+ctrl+t***):
-	1) Install ROS by following this tutorial (see ROS chapter)
-	2) Import the repos from github : 
-		``` 
-		git clone https://github.com/13055ecam/Color-detection-module
+- Download last version Ubuntu mate (16.04) or an another distribution for the raspberry (see [install](ros/install.md))
+- Active WiFi and open terminal (***alt+ctrl+t***):
+	1) Install ROS (see [install](ros/install.md))
+	2) Import this repo from github 
+	3) Go to "codes" folder: 
 		```
-	3) Go to "Color-detection-module" folder: 
+		cd src/codes/software/image-processing/tests
 		```
-		cd Color-detection-module 
+	4) Connect the GoPro or your webcam to the Raspberry
+	4) For testing the camera, go to "test camera" folder : 
 		```
-	4) For testing the camera, go to "test" folder : 
-		```
-		cd test
+		cd test_camera
 		```
 		- For GoPro: 
 		```
 		python3 go_pro_test.py
 		``` 
-		Note:don't forget to connect the GoPro WiFi to the raspberry Pi !
+		***Don't forget to connect the GoPro WiFi to the raspberry Pi !***
+		
 		- For the webcam: 
 		```
 		python webcam_test.py
@@ -72,8 +65,7 @@ As a matter of conclusion, we send combination to the robot by ROS.
 **Scripts**
 - Go to color_detection folder :
 ```
-cd ... 
-cd color_detection
+cd ../test_color_detection
 ```
 - Open GP_combination.sh :
 ```
@@ -83,11 +75,12 @@ nano GP_combination.sh
 ```
 nmcli c up "your GoPro wifi"
 ```
-- Change ***line6*** with the name of WiFi
+- Change ***line6*** with the name of robot WiFi 
 ```
-nmcli c up "your main wifi"
+nmcli c up "your wifi robot"
 ```
-and save it (***ctrl+x***)
+save it (***ctrl+x***)
+
 - Run this script on the terminal : 
 ```
 bash GP_combination.sh 
@@ -117,22 +110,23 @@ Note : xmin is the left side of the square, xmax is the right side of the square
 - Take note of the RGB color  
 - Open a new tab (***ctrl+shift+t***)
 - Change the color range in the code (color_detection.py) and save the file (***ctrl+x***)
-![z](/img/software/image-processing/image4.png)
+![z](../img/software/image-processing/image4.png)
 
 ##### ROS
 
 You use ***ROS*** to send the color combination to another robot module :
 - Open terminal and launch ROS : 
 ````
-roslaunch test4 test.launch 
+. ~/eurobot_ws/devel/setup.bash
+roslaunch image-processing test.launch 
 ```` 
 - Open a new tab (***ctrl+shift+t***) and display messages published to a topic : 
  
 ```` 
 rostopic echo /color_seq 
 ````
-Note : don't forget to change frames positions and color ranges !
-### Bonus : flashlight module
+***Don't forget to change frames positions and color ranges !***
+### Flashlight module
 
 #### Aim
 
@@ -149,7 +143,7 @@ We added a LED flashlight above the camera because light is an important factor 
 We use pin 4 of the raspberry Pi zero to power the gate pin of IRF520 mosfet in order to control the light. The board is powered with a 5V power supply from the battery (pin 2 = 5V and pin 6= GND).
 
 #### Setup 
-- Run the code on the terminal: 
+- for testing the flashlight, run :  
 ```
 python flashlight.py
 ```
