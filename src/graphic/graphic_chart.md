@@ -1,6 +1,6 @@
 # Graphic chart
 
-![alt text](./graphic_chart.PNG)
+![alt text](graphic/graphic_chart.PNG)
 
 ## Colors
 
