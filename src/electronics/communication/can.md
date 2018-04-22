@@ -33,9 +33,26 @@ Les problèmes évoqués précédemment ont déjà été rencontrés il y a plus
 * Gyroscope, accéléromètre...
 * Contrôle sécurité, ABS, Airbag, portes ouvertes, ceintures...
 
-On se rend bien compte l'importance de l'électronique et au vu du nombre croissants de ces derniers, le câblage fut vite un vrai problème. Ainsi, BOSCH, a mis développé le CANBus pour répondre 
+### Caratéristiques et avantages
 
+On se rend bien compte l'importance de l'électronique et au vu du nombre croissants de ces derniers, le câblage fut vite un vrai problème. Ainsi, BOSCH, a mis au point le CANBus avec de nombreuses caractéristiques avantageuses : 
 
+* Grande quantité de données jusqu'a 1 Megabit/s (voir plus bas en fonction des distances)
+* Temps réel (point fort par rapport au TCP/IP)
+* Détection d'erreurs, rapide récupération et réparation (toujours temps réel)
+* Grande stabilité et sécurtié
+* Basé sur un signal différentiel ce qui lui procure sa robustesse aux environnements sévères (Bruits électromagnétiques et tolérance aux pannes)
+* Utilise un câble torsadé ce qui limite l'émission de bruit
+
+#### Topologie 
+
+Enfin, le plus grand avantage du CANBus est sa topologie *une ligne* ce qui réduit drastiquement le nombre de câble. C'est d'ailleur la raison pour laquelle le CANBus est utilisé dans toutes les voitures modernes.
+
+![alt text](./CAN_SRC/can_topology.png )
 
 # Liens utiles
+
+- Introduction au CANBus par Texas Instrument, <http://www.ti.com/lit/an/sloa101b/sloa101b.pdf> 
+- Spécification CAN par BOSCH, <https://www.kvaser.com/software/7330130980914/V1/can2spec.pdf>
+- Implémentation CANBus avec Arduino, <http://www.prometec.net/wp-content/uploads/2015/07/Controller-Area-Network-Prototyping-With-Arduino-Wilfried-Voss.pdf>
 
