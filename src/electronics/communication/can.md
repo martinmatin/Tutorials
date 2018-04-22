@@ -121,17 +121,55 @@ Il existe plusieurs librairies proposant l'utilisation du MCP2515 avec un microc
 Une libraire complète et mise à jour régulièrement est di 
 <https://github.com/Seeed-Studio/CAN_BUS_Shield>
 
-#### Masque
+
 
 #### Filtres
 
 Les filtres permettent de choisir quels messages vont être *écoutés* par le controlleur CAN et envoyés au microcontrolleur.
 
-Le MCP2552 permet de définir 6 filtres.
+Le MCP2552 permet de définir 6 filtres. Exemple avec la définition de 2 filtres :
 
 ```javascript
 CAN.init_Filt(0, 0, 0x04);                          
 CAN.init_Filt(1, 0, 0x05);                          
+```
+
+Ce code induit que le controlleur n'écoutera que les messages avec l'ID 0x04 ou 0X05.
+
+#### Masque
+Les masques définissent les bits que l'on va regarder pour filtrer les ID entrant. Si le bit est à 1, l'ID doit respecter le filtre, sinon pas.
+
+Exemple avec le filtre suivant :
+
+```javascript
+0100 1101
+```
+
+Si je définis mon masque à 0XFF, soit
+```javascript
+1111 1111
+```
+
+Cela veut dire que l'ID entrant doit être strictement pareil que le filtre car tous les bits du masques sont à 1. Donc seul un message avec l'ID
+
+```javascript
+0100 1101
+```
+sera accepté.
+
+Si maintenant le masque est le suivant :
+
+```javascript
+1111 1110
+```
+
+Cela veut dire que le masque le filtre ne regarde pas le dernier bit d'un ID.
+
+Les ID suivant seront donc accpetés :
+
+```javascript
+0100 1100
+0100 1101
 ```
 
 # Liens utiles
