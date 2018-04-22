@@ -41,9 +41,14 @@ On se rend bien compte l'importance de l'électronique et au vu du nombre croiss
 * Temps réel (point fort par rapport au TCP/IP)
 * Détection d'erreurs, rapide récupération et réparation (toujours temps réel)
 * Grande stabilité et sécurtié
-* Priorisation des messages
+* Priorisation de transmission
 * Basé sur un signal différentiel ce qui lui procure sa robustesse aux environnements sévères (Bruits électromagnétiques et tolérance aux pannes)
 * Utilise un câble torsadé ce qui limite l'émission de bruit
+
+Ci-dessous, les vitesses de transmissions possibles en fonction de la longueur du bus.
+
+![alt text](./CAN_SRC/can_speed.png )
+
 
 #### Topologie 
 
@@ -51,16 +56,44 @@ Enfin, le plus grand avantage du CANBus est sa topologie *une ligne* ce qui réd
 
 ![alt text](./CAN_SRC/can_topology.png )
 
-Ce qu'on observe sur la figure précédente, est le passage d'un système sans CANBus (à gauche) à un systèe avec CANBus (à droite). On remarque qu'une ligne traverse l'ensemble  du système à laquelle chacun des composants va se connecter pour intérargir.
+Ce qu'on observe sur la figure précédente, est le passage d'un système sans CANBus (à gauche) à un systèe avec CANBus (à droite). On remarque qu'une ligne traverse l'ensemble  du système à laquelle chacun des composants (noeud) va se connecter pour intérargir comme représenté à la figure suivante : 
+
+![alt text](./CAN_SRC/can_budnode.jpg )
 
 On peut faire l'analogie avec des personnes dans une pièces où tout le monde crie pour se faire entendre. Un système de priorité permet de départager les personnes voulant parler en même temps.
 
-### Priorité
+### Consitutation d'une trame
 
+![alt text](./CAN_SRC/can_frame.jpg)
+
+Une trame de donnée est constituée de plusieurs parties
+
+* 1 bit dominant caractérisant le début d'une trame
+* L'ID du message composé de 11 bit dans le CAN standart ou 29 bits dans le CAN étendu
+* Un champ de commande de 6 bits qui détermine la longueur du champs de données
+* Les données composée de 0 à 8 octets (64 bits)
+* Un champs CRC pour la détection d'erreur
+* Un champs d'acquittement
+* Bit de fin de trame
+
+### Priorité des transmissions
+
+Lorsque plusieurs noeud veulent communiquer en même temps sur le Bus, c'est le champ d'arbitrage qui va déterminer la priorité. Elle sera donné au premier noeud présentant un bit dominant (0) alors que les autres noeuds présentent un bit récessif. 
+
+Cela confère un grand avantage au canbus, il est possible de faire de la priorité de transmission en choisissant un bon ID. Par exemple, dans une voiture, le système de frein est bien plus important que le système de chauffage. L'ID du système de frein se constitué d'un nombre beaucoup plus bas (beaucoup de 0) que celui du système de chauffage.
+
+### 
+
+## Implémentation
+
+### Hardware
+
+### Software (Arduino)
 
 # Liens utiles
 
 - Introduction au CANBus par Texas Instrument, <http://www.ti.com/lit/an/sloa101b/sloa101b.pdf> 
 - Spécification CAN par BOSCH, <https://www.kvaser.com/software/7330130980914/V1/can2spec.pdf>
 - Implémentation CANBus avec Arduino, <http://www.prometec.net/wp-content/uploads/2015/07/Controller-Area-Network-Prototyping-With-Arduino-Wilfried-Voss.pdf>
+- CANBus sur Wikipédia (très bien documenté en Fr et En), https://en.wikipedia.org/wiki/CAN_bus
 
