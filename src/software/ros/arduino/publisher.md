@@ -29,7 +29,7 @@ where msg is the name of the object. And of course you can choose the type of th
 
 Then you have to choose if you want to create a publisher, a subscriber or even both.
 
-To create a publisher
+To create a publisher :
 ```
 ros::Publisher chatter("chatter", &msg);
 ```
@@ -55,7 +55,7 @@ void setup()
 ```
 To fill the message object with the data you just have to do this :
 ```
-msg.data = hello
+msg.data = hello;
 ```
 where hello is the data you put in your message and hello must have the same type as the msg variable.
 
