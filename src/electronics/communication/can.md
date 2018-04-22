@@ -82,13 +82,57 @@ Lorsque plusieurs noeud veulent communiquer en même temps sur le Bus, c'est le 
 
 Cela confère un grand avantage au canbus, il est possible de faire de la priorité de transmission en choisissant un bon ID. Par exemple, dans une voiture, le système de frein est bien plus important que le système de chauffage. L'ID du système de frein se constitué d'un nombre beaucoup plus bas (beaucoup de 0) que celui du système de chauffage.
 
-### 
 
 ## Implémentation
 
 ### Hardware
 
+![alt text](./CAN_SRC/can_hardware.png)
+
+La figure précedente présente l'implemntation hadware du CANBus. Elle est facilité par l'existence de modules tout fait développés par différentes entreprises. Un noeud est constitué d'un CAN transceiver (émetteur-récepteur), un CAN controlleur, un microcontrolleur et éventuellement de résistance de fin de lignes.
+
+#### Transceiver
+
+Microchip propose un grand nombre de solutions pour l'automobile. Parmi celles-ci un transceiver. 
+
+Il s'agit du MCP2562. Anciennement MCP2551, il sert à convertir le signal TTL en signal différentiel exigé par le standart CAN.
+
+#### Controller 
+
+Microchip propose le controlleur CAN MCP2515 qui implémente toute les spécifications CAN 2.0. Il est capable d'envoyer et de recevoir les données et de communiquer avec en SPI avec un microcontrolleur.
+
+#### Micro-controlleur
+Il est peut être choisi selon les envies et spécifications du système du moment qu'il puissent communiquer en SPI.
+
+Un ATMega328p très populaire peut être pris comme exemple.
+
+#### Resistance
+
+Comme dans toutes les liaisons, il existe de la réflexion qui peut gêner le système. Celle-ci peut être évitée par le placement de résistance, dimensionnée par BOSCH, de 120 Ohm en fin de ligne.
+
+#### PCB
+
+En cours de développpement, documentation bientôt disponible.
+
 ### Software (Arduino)
+
+Il existe plusieurs librairies proposant l'utilisation du MCP2515 avec un microcontroleur.
+
+Une libraire complète et mise à jour régulièrement est di 
+<https://github.com/Seeed-Studio/CAN_BUS_Shield>
+
+#### Masque
+
+#### Filtres
+
+Les filtres permettent de choisir quels messages vont être *écoutés* par le controlleur CAN et envoyés au microcontrolleur.
+
+Le MCP2552 permet de définir 6 filtres.
+
+```javascript
+CAN.init_Filt(0, 0, 0x04);                          
+CAN.init_Filt(1, 0, 0x05);                          
+```
 
 # Liens utiles
 
