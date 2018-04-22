@@ -106,7 +106,7 @@ void loop()
   delay(1000);
 }
 ```
-You have to upload this code on the Arduino board before connecting it to the Raspberry starting the test on ROS.
+You have to upload this code on the Arduino board before connecting it to the Raspberry and before starting the test on ROS.
 
 
 # Test on a Raspberry #
