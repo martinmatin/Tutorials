@@ -1,6 +1,6 @@
-# Comprendre et implémenter le CANBus
+# Why using CANBus on the robots and how to implement it 
 
-## Contexte et problématique
+## Issues and context of the Eurobot ( 2018 )
 
 
 Many technologies have been implemented on the robots for the 2018 edition of the EUROBOT.
