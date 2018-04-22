@@ -1,4 +1,3 @@
-
 # Subscriber #
 
 To try this tutorial on you Arduino board you have to connect a Led. The pin used here is the 13 but of course you can change it in the code if you want to use another one.
