@@ -1,5 +1,5 @@
-#The big robot specifications
-
+# The big robot specifications
+![alt text](./bigrobot_render.PNG)
 ## Fusion 360
 
 The entire robot is designed in Fusion 360 and is available on the Eurobot cloud.
