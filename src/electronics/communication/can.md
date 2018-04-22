@@ -47,7 +47,7 @@ On se rend bien compte l'importance de l'électronique et au vu du nombre croiss
 
 Ci-dessous, les vitesses de transmissions possibles en fonction de la longueur du bus.
 
-![alt text](./CAN_SRC/can_speed.png )
+![alt text](./CAN_SRC/can_speed.PNG )
 
 
 #### Topologie 
@@ -58,7 +58,7 @@ Enfin, le plus grand avantage du CANBus est sa topologie *une ligne* ce qui réd
 
 Ce qu'on observe sur la figure précédente, est le passage d'un système sans CANBus (à gauche) à un systèe avec CANBus (à droite). On remarque qu'une ligne traverse l'ensemble  du système à laquelle chacun des composants (noeud) va se connecter pour intérargir comme représenté à la figure suivante : 
 
-![alt text](./CAN_SRC/can_budnode.jpg )
+![alt text](./CAN_SRC/can_busnode.jpg )
 
 On peut faire l'analogie avec des personnes dans une pièces où tout le monde crie pour se faire entendre. Un système de priorité permet de départager les personnes voulant parler en même temps.
 
