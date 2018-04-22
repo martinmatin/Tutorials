@@ -16,7 +16,7 @@ Most of the part are home made (CNC, 3D printing) but some parts a bought on the
     * Rail : Igus N Series, NS-01-27-300, Linear Guide Rail 27mm width 300mm length
     * Carriage : https://befr.rs-online.com/web/p/linear-guides-guide-blocks-carriages/3752445/
 * **Lift transmission**
-  * *Pitch* : 2.032
+  * *Pitch (distance between tooths) * : 2.032
   * *Pulley* : aluminium, Glass Filled PC Timing Belt Pulley, 6mm Belt Width x 2.032mm Pitch, 36 Tooth, Maximum Bore Dia. 5mm
   * *Timing belt* : RS Pro, Timing Belt, 315 Tooth, 640.08mm Length X 6mm Width
 
