@@ -6,7 +6,7 @@
     - [3D printing](mechanical/3d-print.md)
     - [Mecanum wheels](mechanical/mecanum.md)
     - [2018 specifics](mechanical/2018/lift.md)
-        - [Lift](mechanical/2018/lift.md)
+        - [Lift](mechanical/2018/bigRobot.md)
         - [Ball mechanism](mechanical/2018/balls.md)
 - [Electronics](electronics/electronics.md)
     - [Actuators](electronics/actuators/actuators.md)
