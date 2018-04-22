@@ -12,7 +12,7 @@ However, unexpected downsides appeared during the implementation of the technolo
 Thoses downsides are of all type but those who are speaking about during this tutorial are **electronic* and **space**.
 
 
-![alt text](./CAN_SRC/complex-wiring.png "Logo Title Text 1" )
+![alt text](electronics/communication/CAN_SRC/complex-wiring.png "Logo Title Text 1" )
 
 ### Electronic problem
 
@@ -58,7 +58,7 @@ To resolve this, BOSCH developped the CANBus with several caracteristics :
 
 You can see below the speed transmission according to the distances
 
-![alt text](./CAN_SRC/can_speed.PNG )
+![alt text](electronics/communication/CAN_SRC/can_speed.PNG )
 
 
 #### Topology
@@ -69,19 +69,19 @@ Finally, the biggest benefit of the CANBus is his one bus line topology which li
 This the reason why it is used on every modern car.
  
 
-![alt text](./CAN_SRC/can_topology.png )
+![alt text](electronics/communication/CAN_SRC/can_topology.png )
 
 We can see on the last figure a system without the CANBus (left) and a system with the CANBus (right).
 
 Every component, called a node, is connected to the bus line like the figure below :
 
-![alt text](./CAN_SRC/can_busnode.jpg )
+![alt text](electronics/communication/CAN_SRC/can_busnode.jpg )
 
 By analogy, the CANBus can be represented by a number of people ( the nodes ) in a room ( the bus line ) where everybody screams his informations. Everyelse has the choice to listen or not. A priority system chooses who is going to speak when several people want to speak at the same time.
 
 ### The frame
 
-![alt text](./CAN_SRC/can_frame.jpg)
+![alt text](electronics/communication/CAN_SRC/can_frame.jpg)
 
 A data frame is made of different parts : 
 
@@ -104,7 +104,7 @@ It gives an important advantage to CANBus, it is possible to make priority of tr
 
 ### Hardware
 
-![alt text](./CAN_SRC/can_hardware.png)
+![alt text](electronics/communication/CAN_SRC/can_hardware.png)
 
 The last figure shows the implementation of the CANBus. The implementation is quite easy because of the modules proposed by Microchip.
 
