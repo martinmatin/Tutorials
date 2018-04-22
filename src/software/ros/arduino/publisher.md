@@ -68,7 +68,10 @@ void loop()
 }
 ```
 
-Finally you have to add a last line of code in the loop to will call all the callbacks waiting to be called at that point in time.
+Finally you have to add a last line of code in the loop that will call all the callbacks waiting to be called at that point in time :
+```
+nh.spinOnce();
+```
 
 Now that you know how each part of the code works you can test a «Hello World» example available on the wiki.ros.org website <http://wiki.ros.org/rosserial_arduino/Tutorials/Hello%20World> :
 ```
