@@ -170,7 +170,7 @@ For example with the following filter :
 0100 1101
 ```
 
-We the mask is :
+If the mask is :
 ```javascript
 1111 1111
 ```
