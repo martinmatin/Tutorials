@@ -2,180 +2,201 @@
 
 ## Contexte et problématique
 
-De nombreuses nouvelles technologies ont été impléentées sur les robots lors de l'édition 2018 de l'eurobot. 
 
-Ces dernières ont constitué une avancée non négligeable en terme de qualité, de rapidité et de simplicité. 
-Cependant, des inconvénients inatendus sont apparus lors de l'implémentation et la convergence des technologies sur les robots.
-Ces inconvénients sont des tous types mais ceux que l'on va retenir pour ce tutoriel sont d'ordre **électronique** et **physique**.
+Many technologies have been implemented on the robots for the 2018 edition of the EUROBOT.
+
+Those technologies where where huge step forward in terms of quality, speed and ease of use.
+
+However, unexpected downsides appeared during the implementation of the technologies on the robots.
+
+Thoses downsides are of all type but those who are speaking about during this tutorial are **electronic* and **space**.
+
 
 ![alt text](./CAN_SRC/complex-wiring.png "Logo Title Text 1" )
 
-### Problème électronique
+### Electronic problem
 
-Une fois installées, l'ensemble des cartes nécessitent de nombreuses connexions entres elles. La dernière image fait allusion au résultat final du câblage sur les robots. 
+Once the board are installend on the robots, they needed a lot of connections between them. The last picture remembers the kind of resul we got after connecting all the wires.
 
-Electroniquement, cela induit une grande complexité lorsqu'une nouvelle connexion doit être faite. Cette complexité se fait également ressentir pour le débuggage car il est difficil de prendre des mesures et déterminer d'où vient l'erreur.
+From that moment it is very complex to add or remove wires because.
 
-### Problème physique
+It is also very complex for the debugging because it is hard to make measure and to find where the error is.
 
-Un autre problème qui est apparut et qui peut être moins intuitif ou du moins difficilement anticipable est l'espace pris par les câbles. Lors de la conception, **l'erreur** qu'on a fait, est de ne pas prendre en compte le câblage. Il serait opportun à l'avenir de déterminer des marges (coefficients) lors des calculs de dimensions et d'espace. Cette erreur a généré chez nous un nombre incalculable de câble ne suivant pas de chemin. 
-L'autre problème physique avec un nombre important de connexions est la résistance mécanique de ces connexions. En effet, sur le petit robot, nous avons observé de nombreux "bugs" du à la déconnexion non voulue des câbles où au fait que certain fil de "désoudaient" du au trop grand nombre de câble présents et exercants une force dans les différents espaces restraints. 
 
+### Space problem
+
+Another problem wich appeared and thaht couldn't have been expected is the huge space token by the wires.
+
+During the conception the **mistake** we did is to disregard the size of the wires. It should be in the futur by taking some leeway on the size of the robot during the conception.
+
+
+The huge number of wires had also an mechanical impact. It added constraint on the connexions wich often broke.
 
 ## Le CANBus
 
-### Contexte d'apparition
+### Context
+Those problem have already been meet many years ago in the automotive. Indeed, more and more electronic devises where used in the cars for differents purposes :
 
-Les problèmes évoqués précédemment ont déjà été rencontrés il y a plusieurs années dans le milieu de l'automobile. En effet, au temps où l'électronique a fait son apparition dans les voitures, le nombre de composants intelligents n'ont cessé d'augmenter durant des années. Les composants électroniques étaient utilisés à tous les niveaux : 
+* Engine temperature, air...
+* RPM, speed...
+* accelerometer...
+* Safety, ABS, Airbag, opened doors, seatbelt...
 
-* Températures moteurs, air...
-* Régime moteur, vitesse engagées ...
-* Gyroscope, accéléromètre...
-* Contrôle sécurité, ABS, Airbag, portes ouvertes, ceintures...
+### Specifications
 
-### Caratéristiques et avantages
+We can cleary see that with the number of wires increasing the wiring harness became a real problem.
 
-On se rend bien compte l'importance de l'électronique et au vu du nombre croissants de ces derniers, le câblage fut vite un vrai problème. Ainsi, BOSCH, a mis au point le CANBus avec de nombreuses caractéristiques avantageuses : 
+To resolve this, BOSCH developped the CANBus with several caracteristics :
 
-* Grande quantité de données jusqu'a 1 Megabit/s (voir plus bas en fonction des distances)
-* Temps réel (point fort par rapport au TCP/IP)
-* Détection d'erreurs, rapide récupération et réparation (toujours temps réel)
-* Grande stabilité et sécurtié
-* Priorisation de transmission
-* Basé sur un signal différentiel ce qui lui procure sa robustesse aux environnements sévères (Bruits électromagnétiques et tolérance aux pannes)
-* Utilise un câble torsadé ce qui limite l'émission de bruit
+* High speed communication up to 1 Megabit/s (see the table below for more information)
+* Real time ( wich makes CANBus better than TCP/IP)
+* Error detection, fast recovery and repair ( stil in real time)
+* Security and stability
+* Priorization of transmission
+* Based on a differiental signal, the CANBus is made for harsh environnements (External noises and fault tolerance
+* It uses a twisted pair cable wich limit the noise emition
 
-Ci-dessous, les vitesses de transmissions possibles en fonction de la longueur du bus.
+You can see below the speed transmission according to the distances
 
 ![alt text](./CAN_SRC/can_speed.PNG )
 
 
-#### Topologie 
+#### Topology
 
-Enfin, le plus grand avantage du CANBus est sa topologie *une ligne* ce qui réduit drastiquement le nombre de câble. C'est d'ailleur la raison pour laquelle le CANBus est utilisé dans toutes les voitures modernes.
+Finally, the biggest benefit of the CANBus is his one bus line topology which limit the number of cable to 4. (CAN HIGH, CAN LOW, VCC and GROUND).
+
+
+This the reason why it is used on every modern car.
+ 
 
 ![alt text](./CAN_SRC/can_topology.png )
 
-Ce qu'on observe sur la figure précédente, est le passage d'un système sans CANBus (à gauche) à un systèe avec CANBus (à droite). On remarque qu'une ligne traverse l'ensemble  du système à laquelle chacun des composants (noeud) va se connecter pour intérargir comme représenté à la figure suivante : 
+We can see on the last figure a system without the CANBus (left) and a system with the CANBus (right).
+
+Every component, called a node, is connected to the bus line like the figure below :
 
 ![alt text](./CAN_SRC/can_busnode.jpg )
 
-On peut faire l'analogie avec des personnes dans une pièces où tout le monde crie pour se faire entendre. Un système de priorité permet de départager les personnes voulant parler en même temps.
+By analogy, the CANBus can be represented by a numbers of people ( the nodes ) in a room ( the bus line ) where everybody screams his informations. Everyelse has the choice to listen or not. A priority system choose who is going to speak when several people want to sepak at the same time.
 
-### Consitutation d'une trame
+### The frame
 
 ![alt text](./CAN_SRC/can_frame.jpg)
 
-Une trame de donnée est constituée de plusieurs parties
+A data frame is made of different parts : 
 
-* 1 bit dominant caractérisant le début d'une trame
-* L'ID du message composé de 11 bit dans le CAN standart ou 29 bits dans le CAN étendu
-* Un champ de commande de 6 bits qui détermine la longueur du champs de données
-* Les données composée de 0 à 8 octets (64 bits)
-* Un champs CRC pour la détection d'erreur
-* Un champs d'acquittement
-* Bit de fin de trame
+* 1 dominant bit begins the frame
+* The ID of the message is made of 11 bits in the standart CAN or 29 bits in the extended CAN.
+* 6 bits wich determine the lenght of the frame
+* The data made of 0...8 bytes
+* 15 bits of CRC to detect errors
+* ACK
+* End of frame bit
 
-### Priorité des transmissions
+### Priority of transmission
 
 Lorsque plusieurs noeud veulent communiquer en même temps sur le Bus, c'est le champ d'arbitrage qui va déterminer la priorité. Elle sera donné au premier noeud présentant un bit dominant (0) alors que les autres noeuds présentent un bit récessif. 
 
-Cela confère un grand avantage au canbus, il est possible de faire de la priorité de transmission en choisissant un bon ID. Par exemple, dans une voiture, le système de frein est bien plus important que le système de chauffage. L'ID du système de frein se constitué d'un nombre beaucoup plus bas (beaucoup de 0) que celui du système de chauffage.
+When differents nodes whant to talk at the same time on the bus line, it is the ID wich is going to determine the priority. 
+
+It gives an important advantage to CANBus, it is possible to make priority of transmission by choosing the right ID. For example, in car the brake is system is more important than the light system. The ID of the brake system will be lower ( more 0 ) than the light system.
 
 
-## Implémentation
+## Implementation
 
 ### Hardware
 
 ![alt text](./CAN_SRC/can_hardware.png)
 
-La figure précedente présente l'implemntation hadware du CANBus. Elle est facilité par l'existence de modules tout fait développés par différentes entreprises. Un noeud est constitué d'un CAN transceiver (émetteur-récepteur), un CAN controlleur, un microcontrolleur et éventuellement de résistance de fin de lignes.
+The last figure shows the implementation of the CANBus. The implementation is quite easy because of the modules proposed by Microchip.
+
+
+A node is made of a transceiver, a CAN controller and a microcontroller. 
 
 #### Transceiver
 
 Microchip propose un grand nombre de solutions pour l'automobile. Parmi celles-ci un transceiver. 
 
-Il s'agit du MCP2562. Anciennement MCP2551, il sert à convertir le signal TTL en signal différentiel exigé par le standart CAN.
+Microchip proposes a huge numbers of solutions for the automotive including a transceiver.
+
+It is the MCP2562. Formerly the MCP2551, it is used to convert the TTL signal to a differential signal required by the CANBus.
+
 
 #### Controller 
 
-Microchip propose le controlleur CAN MCP2515 qui implémente toute les spécifications CAN 2.0. Il est capable d'envoyer et de recevoir les données et de communiquer avec en SPI avec un microcontrolleur.
+Microchip also proposes the CAN controller MCP2515 wich implements all the CAN 2.0 specifications. It is able to send and receive data and communicate it via SPI to a microcontroller.
 
-#### Micro-controlleur
-Il est peut être choisi selon les envies et spécifications du système du moment qu'il puissent communiquer en SPI.
+#### Microcontroller.
+Any microcontroller with a integrated SPI communication can be selected.
 
-Un ATMega328p très populaire peut être pris comme exemple.
+For example we can take the famous ATMEGA328p know for his arduino IDE.
 
 #### Resistance
 
-Comme dans toutes les liaisons, il existe de la réflexion qui peut gêner le système. Celle-ci peut être évitée par le placement de résistance, dimensionnée par BOSCH, de 120 Ohm en fin de ligne.
+In every communication wire there is some reflexion that can corrupt the data. It can be avoided by using 120 Ohm resistor at the end of line.
 
 #### PCB
 
-En cours de développpement, documentation bientôt disponible.
+Coming soon.
 
 ### Software (Arduino)
 
-Il existe plusieurs librairies proposant l'utilisation du MCP2515 avec un microcontroleur.
+There are many libraries that proposes functions to interract with the CAN controller via SPI from the micrcontroller.
 
-Une libraire complète et mise à jour régulièrement est di 
+A very comlete and up to date library is the Seed studio lib :
 <https://github.com/Seeed-Studio/CAN_BUS_Shield>
 
 
 
-#### Filtres
+#### Filters
 
-Les filtres permettent de choisir quels messages vont être *écoutés* par le controlleur CAN et envoyés au microcontrolleur.
+Filters allow to choose wich messages will be sent to the microcontroller from the CAN controller.
 
-Le MCP2552 permet de définir 6 filtres. Exemple avec la définition de 2 filtres :
+The MCP2515 is able the define 6 filters. For example :
 
 ```javascript
 CAN.init_Filt(0, 0, 0x04);                          
 CAN.init_Filt(1, 0, 0x05);                          
 ```
 
-Ce code induit que le controlleur n'écoutera que les messages avec l'ID 0x04 ou 0X05.
+This code means that the CAN controller will only lister the the messages with an ID of 0x04 and 0x05.
 
-#### Masque
-Les masques définissent les bits que l'on va regarder pour filtrer les ID entrant. Si le bit est à 1, l'ID doit respecter le filtre, sinon pas.
+#### Masks
+The masks defines the bits that will be inspected to filter the coming ID. If the bit of the mask is 1, it means that the ID has to respect the bit of the filter.
 
-Exemple avec le filtre suivant :
+For example with the following filter : 
 
 ```javascript
 0100 1101
 ```
 
-Si je définis mon masque à 0XFF, soit
+We the mask is :
 ```javascript
 1111 1111
 ```
-
-Cela veut dire que l'ID entrant doit être strictement pareil que le filtre car tous les bits du masques sont à 1. Donc seul un message avec l'ID
+Then it means that the accepted ID has to have exactly the same bits thant the filter because all the masks bits are 1. Only a message witch the next ID will be accepted : 
 
 ```javascript
 0100 1101
 ```
-sera accepté.
-
-Si maintenant le masque est le suivant :
+Now, if the mask is this one :
 
 ```javascript
 1111 1110
 ```
+It means that the filter will not inspect the last bit of the ID.
 
-Cela veut dire que le masque le filtre ne regarde pas le dernier bit d'un ID.
-
-Les ID suivant seront donc accpetés :
+The next ID's will be accpeted
 
 ```javascript
 0100 1100
 0100 1101
 ```
 
-# Liens utiles
+# Usefull links
 
-- Introduction au CANBus par Texas Instrument, <http://www.ti.com/lit/an/sloa101b/sloa101b.pdf> 
-- Spécification CAN par BOSCH, <https://www.kvaser.com/software/7330130980914/V1/can2spec.pdf>
-- Implémentation CANBus avec Arduino, <http://www.prometec.net/wp-content/uploads/2015/07/Controller-Area-Network-Prototyping-With-Arduino-Wilfried-Voss.pdf>
-- CANBus sur Wikipédia (très bien documenté en Fr et En), https://en.wikipedia.org/wiki/CAN_bus
+- Introduction to CANBus by Texas Instrument, <http://www.ti.com/lit/an/sloa101b/sloa101b.pdf> 
+- CAN specs by BOSCH, <https://www.kvaser.com/software/7330130980914/V1/can2spec.pdf>
+- CANBus implementation with Arduino, <http://www.prometec.net/wp-content/uploads/2015/07/Controller-Area-Network-Prototyping-With-Arduino-Wilfried-Voss.pdf>
+- Well documented on Wikipedia, https://en.wikipedia.org/wiki/CAN_bus
 
