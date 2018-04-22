@@ -41,6 +41,7 @@ On se rend bien compte l'importance de l'électronique et au vu du nombre croiss
 * Temps réel (point fort par rapport au TCP/IP)
 * Détection d'erreurs, rapide récupération et réparation (toujours temps réel)
 * Grande stabilité et sécurtié
+* Priorisation des messages
 * Basé sur un signal différentiel ce qui lui procure sa robustesse aux environnements sévères (Bruits électromagnétiques et tolérance aux pannes)
 * Utilise un câble torsadé ce qui limite l'émission de bruit
 
@@ -49,6 +50,13 @@ On se rend bien compte l'importance de l'électronique et au vu du nombre croiss
 Enfin, le plus grand avantage du CANBus est sa topologie *une ligne* ce qui réduit drastiquement le nombre de câble. C'est d'ailleur la raison pour laquelle le CANBus est utilisé dans toutes les voitures modernes.
 
 ![alt text](./CAN_SRC/can_topology.png )
+
+Ce qu'on observe sur la figure précédente, est le passage d'un système sans CANBus (à gauche) à un systèe avec CANBus (à droite). On remarque qu'une ligne traverse l'ensemble  du système à laquelle chacun des composants va se connecter pour intérargir.
+
+On peut faire l'analogie avec des personnes dans une pièces où tout le monde crie pour se faire entendre. Un système de priorité permet de départager les personnes voulant parler en même temps.
+
+### Priorité
+
 
 # Liens utiles
 
