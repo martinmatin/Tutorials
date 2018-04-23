@@ -2,7 +2,7 @@
 
 Les dynamixels sont des servomoteurs ayant un angle de fonctionnement de 300° répartis sur des valeurs allant de 0 à 1023.
 
- 
+![alt text](electronics/actuators/Dynamixels_SRC/.png )
 
 Ils ont aussi la particularité de pouvoir être utilisés en tant que moteur DC. Ils ont un très bon couple moteur ce qui les rend efficaces pour un grand nombre d’applications. Dans nos robots, nous les avons utilisés pour leurs actions à réaliser pendant la compétition, à savoir :
 *	Trier des balles de différentes couleurs
