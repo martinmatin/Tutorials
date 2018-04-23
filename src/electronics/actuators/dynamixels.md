@@ -2,7 +2,7 @@
 
 Les dynamixels sont des servomoteurs ayant un angle de fonctionnement de 300° répartis sur des valeurs allant de 0 à 1023.
 
-![alt text](electronics/actuators/Dynamixels_SRC/.png )
+![alt text](electronics/actuators/Dynamixels_SRC/AngleFonctionnement.png )
 
 Ils ont aussi la particularité de pouvoir être utilisés en tant que moteur DC. Ils ont un très bon couple moteur ce qui les rend efficaces pour un grand nombre d’applications. Dans nos robots, nous les avons utilisés pour leurs actions à réaliser pendant la compétition, à savoir :
 *	Trier des balles de différentes couleurs
@@ -13,7 +13,7 @@ Ils ont aussi la particularité de pouvoir être utilisés en tant que moteur DC
 
 Le câblage se fait à l’aide de petits connecteurs 3pins. 
 
- 
+ ![alt text](electronics/actuators/Dynamixels_SRC/PinsConnections.png )
 
 Les dynamixels possèdent 2 emplacement pour ces connecteurs car il est possible de connecter plusieurs servomoteurs en série et de les contrôler avec un adressage. Ces adresses sont représentées par des ID uniques pour chaque dynamixel qu’il est possible de vérifier à l’aide du Dynamixel Wizard du logiciel Roboplus et d’une interface USB2Dynamixel. 
 Grâce à ce logiciel, il est également possible de configurer les dynamixels (registres) dont, entre autre, le baudrate du servomoteur ainsi que d’accéder à toute une série d’informations temps réel comme la vitesse, la position, etc.
@@ -42,24 +42,26 @@ Grâce à ce logiciel, il est également possible de configurer les dynamixels (
 
 *	Télécharger le logiciel RoboPlus sur le site www.robotis.com en allant dans Support>Download>Software>Roboplus
  
+ ![alt text](electronics/actuators/Dynamixels_SRC/DW_Roboplus.png )
+ 
 *	Lancer le logiciel et cliquer sur Dynamixel Wizard
 
- 
+ ![alt text](electronics/actuators/Dynamixels_SRC/DW_DynamixelWizard.png )
 
 *	Insérer l’interface USB2Dynamixel dans un port USB de l’ordinateur 
 *	Brancher le connecteur 3 pins dans l’interface USB2Dynamixel (coté TTL) et dans le dynamixel à vérifier ou configurer
 *	Sélectionner « TTL » à l’aide du switch sur l’interface USB2Dynamixel
 *	Alimenter le dynamixel séparément dans sa plage de tension de fonctionnement (9-12V, recommandé 11,1V) à l’aide du 2eme port du dynamixel
 
- 
+ ![alt text](electronics/actuators/Dynamixels_SRC/DW_USB2Dynamixel.png )
 
 *	Sélectionner le port de votre ordinateur auquel est branché l’USB2Dynamixel
 
- 
+ ![alt text](electronics/actuators/Dynamixels_SRC/DW_Port.png )
 
 *	Cliquer ensuite sur « Ouvrir le port »
 
- 
+![alt text](electronics/actuators/Dynamixels_SRC/DW_OuvrirLePort.png ) 
 
 * Faire une recherche basique du dynamixel afin de trouver son ID
 
@@ -87,7 +89,7 @@ Ces exemples se trouvent dans Fichier>Exemples>AX-12A.
 
 Après avoir sélectionner un des exemples, il faut inclure la librairie AX-12A sans déclarer un chemin spécifique car la librairie se trouve dans le dossier « libraries » du dossier « Arduino ».
 
- 
+ ![alt text](electronics/actuators/Dynamixels_SRC/Exemples_Include.png )
 
 Ensuite il suffit de configurer 3 lignes dans le code qui répondront aux besoins et à la configuration du dynamixel branché :
 
