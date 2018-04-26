@@ -85,7 +85,7 @@ Slaves may only drive their output (*MISO*) line when *SS** is active, otherwise
 The Arduino is blessed with a support library for the serial peripheral interface. This greatly aids the implementation. For the slave we used an Altera or Xilinx based FPGA implementation . Refer to the first part of this article for details about the physical connection. 
 
 ## 5. BYTE EXCHANGE WITH A FPGA AS SLAVE ##
-Implementing the SPI Slave on an FPGA is like old school digital electronics. My key takeaway is to think hardware, not programming. Implementing [the SPI protocol](https://coertvonk.com/hw/logic/connecting-fpga-and-arduino-using-spi-13067/3) on a FPGA is fairly straightforward for as long as we use a directly clocked sequential circuit while preventing clock domain crossings.
+Implementing the SPI Slave on an FPGA is like old school digital electronics. My key takeaway is to think hardware, not programming. Implementing the [SPI protocol](https://coertvonk.com/hw/logic/connecting-fpga-and-arduino-using-spi-13067/3) on a FPGA is fairly straightforward for as long as we use a directly clocked sequential circuit while preventing clock domain crossings.
 
 ### 5.1. Sequential circuit ### 
 In real life, two signals going to a single gate will not arrive there at the same time due to wire delays. This causes the output to momentarily have an incorrect value. The problem compounds as the signal travels through more gates and wires.
