@@ -51,8 +51,7 @@ You don't have to study them but with your first hour of practice you should alr
 Offset is a very handy tool when it comes to draw parallel lines.
 ![img](../img/mechanical/Offset1.png)
 
-The tools works only in sketch mode and you have to already have a reference line (or a shape). Type the "o"
-key to open the "offset menu", you then have to select the reference line you want. You can either drag and drop the cursor with your mouse or type the value you wish the offset to be.
+The tools works only in sketch mode and you have to already have a reference line (or a shape). Type the "o" key to open the "offset menu", you then have to select the reference line you want. You can either drag and drop the cursor with your mouse or type the value you wish the offset to be.
 ![img](../img/mechanical/Offset_drag.png)![caca](../img/mechanical/OFFSET_VALUE.png)
 You'll end with the line/shape you selected offset as you wanted.
 ![img](../img/mechanical/Offset_finish.png)
@@ -90,17 +89,26 @@ Circular patterns work in a similar way accept the fact you have to choose a cen
 ![img](../img/mechanical/circ_patt-full.png)
 ![img](../img/mechanical/circ_patt_angle.png)
 
-#### On path
-
-The 'On path pattern' tools allows you to create patterns that are nor circular, nor rectangular.
-It only works with volumes and you have to enable the display of the sketch your path is in.
-
-![img](../img/mechanical/patt_onpath_start.png)
-![img](../img/mechanical/Patt_ontpath_last.png)
-![img](../img/mechanical/Patt_onpath_done.png)
+*Note that it's also possible to draw a path and then follow it with our pattern.*
 
 
 ### Mirror
+Available in sketch and also in 3D, the "Mirror" tool is very useful to create quickly two times the same things symmetrically from a line or a plane.
+
+For the 3D, begin draw your piece, in this case, a notch to close a wall.
+![img](../img/mechanical/Mirror_1.png)
+
+Use the Mirror tool. Select the faces that you want to copy and then the plane.
+![img](../img/mechanical/Mirror_2.png)
+*Note that if you select only the top face of your notch you won't be able to copy it because the program doesn't allow you to create a new face in the empty space. You have to select all the three faces of your notch.*
+![img](../img/mechanical/Mirror_3.png)
+
+As We said, it's also available for Sketch mode. So if we want to make two holes symmetric. Just draw a circle ("c" key). Draw a construction line that we'll use as our center line. ("x" key and then "l" key). Chose the distance from the center line ("d" key).Then select "Mirror", select the circle as "Object" and in the "Mirror line" select the construction line
+![img](../img/mechanical/Mirror_4.png)
+![img](../img/mechanical/Mirror_5.png)
+
+We can now make our two holes. Select the two of them (with "ctrl") and then cut them ("q" key).
+![img](../img/mechanical/Mirror_6.png)
 
 ### Fillet
 As you used it in Autocad or similars, Fillet allow you to joint two lines to make one curve.
@@ -127,7 +135,8 @@ You'll also be able to do it with a curved ridge (the one made with fillet)
 ![img](../img/mechanical/Chamfer_4.png)
 *Note that in this case you'll be limited by the angle of the previous made fillet.*
 
-
+Another option is to change the "Chamfer type" and select "Distance and angle" to make a chamfer with a selected angle.
+![img](../img/mechanical/Chamfer_5.png)
 
 
 ### Join
