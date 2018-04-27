@@ -140,7 +140,18 @@ Another option is to change the "Chamfer type" and select "Distance and angle" t
 
 
 ### Join
+A joint is a link between two pieces that describes the way they move one on the other. Is comes in handy when describing actions to external people, or when modeling pieces in an assembly to avoid collisions due to design mistakes.
+To create joints, you have to first **ground components**. By grounding components you avoid them to move, and so you can use them as a static reference. Take *Cortex* for example, the base has been grounded and all the rest around him has been jointed.
+![img](../img/mechanical/cortex.png)
+This means you can not drag it around. The second thing you have to do is **create rigid groups**. By searching for "rigid group" when hitting the "s" key you will enter the "rigid group" menu. You can now select all the component that should move together. You'll still be able to drag them around, but only as one group and not separately anymore. This is for example the case for the mecanum wheels as you can not move is different pieces separately.
+After this is done, we can now **join modules together** ('j' key). To do so select the points of the modules that will touch after jointing starting with the one you want to be able to move.
+![img](../img/mechanical/joint_face1.png)![img](../img/mechanical/joint_face2.png)
 
+After this is done you can select the type of joint you want and the axis along which to movement will have to be.
+
+![img](../img/mechanical/joint_type.png)![img](../img/mechanical/joint_defined.png)
+After confirming the settings, you can right-click on the joint to edit the joints limits and inverse the natural rotation.
+![img](../img/mechanical/joint_limit.png)
 
 ## 3. Importance: dif bodies vs components       PUISS
       attention séléction du bon compo quand nouveau sketch
@@ -148,7 +159,6 @@ Another option is to change the "Chamfer type" and select "Distance and angle" t
 
 ## 4. modification de fichier + stl vers 3D      PUISS
 
-## 5. canvas et svg        will
 
 ## 6. export du design vers plan et/ou slicer    WILL + PUISS
 
