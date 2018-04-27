@@ -1,9 +1,9 @@
-1/ présentation de l'envirronement      WILL
-2/ video Lars         will
+--------1/ présentation de l'envirronement      WILL
+--------2/ video Lars         will
 
 
 
-3/ synthèse de fct principale et guide des fct utiles non expliquées  WILL + PUIS
+--------3/ synthèse de fct principale et guide des fct utiles non expliquées  WILL + PUIS
 
     fct: offset, sweep, apparence, pattern, mirror, fillet, chamfer, join
 
@@ -13,7 +13,7 @@
 
 5/ modification de fichier + stl vers 3D      PUISS
 
-7/ export du design vers plan et/ou slicer    WILL + PUISS
+----------7/ export du design vers plan et/ou slicer    WILL + PUISS
 
 
 8/ spécificité pour impression 3D     PUISS

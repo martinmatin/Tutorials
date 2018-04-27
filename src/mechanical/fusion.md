@@ -164,6 +164,10 @@ After this is done you can select the type of joint you want and the axis along 
 After confirming the settings, you can right-click on the joint to edit the joints limits and inverse the natural rotation.
 ![img](../img/mechanical/joint_limit.png)
 
+ To learn more about jointing component click on the link to Lars's video about that topic <a href=" https://www.youtube.com/watch?v=KQNgIfjMr84">  Fusion 360 Tutorial — How to get a handle on Assembly and Joints in Fusion</a>.
+
+
+
 ## 3. Importance: dif bodies vs components       PUISS
       attention séléction du bon compo quand nouveau sketch
       link d'un dessin vers un autre
