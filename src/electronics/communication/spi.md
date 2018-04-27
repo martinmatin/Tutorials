@@ -1,8 +1,8 @@
-#Serial Peripheral Interface (SPI)
+# Serial Peripheral Interface (SPI)
 >*last updated on April 22, 2018*
 > 
 
-##Quick theoretical reminders 
+## Quick theoretical reminders 
 
 The Serial Peripheral Interface bus (SPI) is a synchronous serial communication interface specification used for short distance communication, primarily in embedded systems. 
 
@@ -19,18 +19,18 @@ To begin a communication with a *Slave*, the *Master* must fix the Slave Select 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/SPI_8-bit_circular_transfer.svg/500px-SPI_8-bit_circular_transfer.svg.png)
 
 
-###advantages 
+### advantages 
 + Full duplex communication
 + Flexibility of the number of bits to be transmitted as well as the protocol itself
 + no possible collision
 
-###disadvantage
+### disadvantage
 + \(3 + N*Slaves\) pins are required on the master
 + 4 pins are required on each slaves
 + Master can speak in a vacuum without knowing it
 + Bus can only count one master
  
-##Use of our SPI
+## Use of our SPI
 
 the communication frame we used to send data to the slave is:
 
@@ -42,12 +42,12 @@ the communication frame we used to send data to the slave is:
 > **Note** :
 > to read some data from a slave's register, the master must just send the register adress. The slave push the data on his MISO (Master Input Slave Output) pin.
 
-###Our Master 
+### Our Master 
 Create a SPI Master is really easy with a atmega328p and the arduino IDE. Indeed, we can find easily some libraries. We used the one provided directly by the arduino IDE in an object that we implemented : [SPIManager](https://github.com/Ecam-Eurobot/Eurobot-2018/blob/master/arduino/SPIManager.cpp)
 
 how to work with [SPIManager](https://github.com/Ecam-Eurobot/Eurobot-2018/blob/master/arduino/SPIManager.cpp) object will be illustrated at least code use for Cortex's engines control (Eurobot 2018) : [MotorBroker](https://github.com/Ecam-Eurobot/Eurobot-2018/blob/master/arduino/Ecam/examples/MotorControl/MotorBroker/MotorBroker.ino)
 
-#####1. Initialisation of the SPI communication
+##### 1. Initialisation of the SPI communication
 The [SPIManager](https://github.com/Ecam-Eurobot/Eurobot-2018/blob/master/arduino/SPIManager.cpp) object must be seen as a communication channel with the slave. It will be necessary to instantiate one [SPIManager](https://github.com/Ecam-Eurobot/Eurobot-2018/blob/master/arduino/SPIManager.cpp) object by slave. When creating the object, use the number of the SS pin as an argument.
 
 ```c
@@ -70,7 +70,7 @@ Use the *initialize()* method to activate the communication channel. This call s
 connFL.initialize();
 ```
 
-#####2. Write data to a Slave's register
+##### 2. Write data to a Slave's register
 as said above, to write a value in a register of the slave will first send the address of the register, then the size in number of byte and to finish, the message.
 
 The *writedata* function has been written to make its use as intuitive as possible.
@@ -80,7 +80,7 @@ below, an example of use where we send to the register **16** (0x10), the messag
 connBR.writeData(0x10, 0x04, x.b);
 ```
 
-#####3. Read data from a Slave's register
+##### 3. Read data from a Slave's register
 There are two functions to read some data: the first,*readLongData* , will return a value of type **long** and the other ,*readData* , a value of type **float32**
 
 below, an example of use where we get some data from th register **81** (0x51).
@@ -93,7 +93,7 @@ encoders_msg.rear_left = connBL.readLongData(0x51);
 >from here the documentation is still being written
 
 
-###Our Slaves
+### Our Slaves
 When using the Arduino IDE to program atmeg328p, the slave mode is not available. Two registers must be modified to *activate* this mode :
 
 ```c
@@ -117,7 +117,7 @@ and some properties :
 3. msg
 4. endtrans
 
-#####1. Initialisation of the SPI communication
+##### 1. Initialisation of the SPI communication
 ```c
 SpiSlave mySPI;
 //SLK  : pin 13
@@ -129,7 +129,7 @@ SpiSlave mySPI;
 ```c
 mySPI.begin();
 ```
-#####2. Interruption
+##### 2. Interruption
 ```c
 //Interrupt needed by SPI Communication
 ISR (SPI_STC_vect) {
@@ -137,7 +137,7 @@ ISR (SPI_STC_vect) {
     spiReg();//Function called at the end of the communication.   
 }
 ```
-#####3. Registers
+##### 3. Registers
 ```c
 void spiReg(){  
 switch (mySPI.command) {
@@ -162,11 +162,11 @@ switch (mySPI.command) {
 ```
 
     
-###Troubleshooting
+### Troubleshooting
 
-#####1. Problem between serial port (ROSSERIAL) and SPI bus
-#####2. sometimes the slave update the value of a register with the value received previously 
-#####3. Changing the values of a register when reading another register
+##### 1. Problem between serial port (ROSSERIAL) and SPI bus
+##### 2. sometimes the slave update the value of a register with the value received previously 
+##### 3. Changing the values of a register when reading another register
 
 
 # References

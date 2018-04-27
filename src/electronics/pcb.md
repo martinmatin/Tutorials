@@ -1,9 +1,9 @@
-#Printed Circuit Boards
+# Printed Circuit Boards
 
 Three types of printed circuit boards were developed for our two robots. The following section presents these boards, it utilities and it conception 
 and gives you all the necessary elements to understand, recreate and use it. 
 
-##Starting Board
+## Starting Board
 Inspired by past version of the starting board
 
 The utility of this PCB is to gather the component serving to the start sequence. Normally this is the only interface with the robot during the 
