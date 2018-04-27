@@ -66,6 +66,8 @@ Then stop your current sketch. Go to another face. Start a new sketch ("s" and t
 You'll be able now to use "Sweep", select the space between the two circle as "profile", select the line as "path" and you'll automatically make a beautiful pipe!
 ![img](../img/mechanical/Sweep_3.png)
 
+We used it for example for the [slide](https://a360.co/2Jzo4oP) in the 2018's ball mechanism. 
+
 
 ### Revolve
 Revolve allows you to create object as if you turned them on a lathe. It comes in handy to make wheels, cannons, ...
