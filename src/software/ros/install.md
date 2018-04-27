@@ -51,7 +51,8 @@ sudo umount /dev/disk<?>s<?>
 sudo dd if=ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img of=/dev/disk<?> bs=4m
 ```
 
-<span style="color:#FF0000;">[...]</span>
+Once the USB stick is made, boot onto the SD Card and follow the install procedure.
+Once Ubuntu is installed, continue with the instructions below.
 
 ### Install dependencies
 
