@@ -66,7 +66,7 @@ Then stop your current sketch. Go to another face. Start a new sketch ("s" and t
 You'll be able now to use "Sweep", select the space between the two circle as "profile", select the line as "path" and you'll automatically make a beautiful pipe!
 ![img](../img/mechanical/Sweep_3.png)
 
-We used it for example for the [slide](https://a360.co/2Jzo4oP) in the 2018's ball mechanism. 
+We used it for example for the [slide](https://a360.co/2Jzo4oP) in the 2018's ball mechanism.
 
 
 ### Revolve
@@ -216,6 +216,6 @@ To **3D print it from your computer** select "Send to 3D print utility" and link
 ## 9. tour de marché sur les différentes imprimantes sur le marché      PUISS + WILL
 
 
-## Contributor
+## Contributors
 - Puissant Baeyens Victor, 12098, [MisterTarock](https://github.com/MisterTarock)
 - De Decker William, 14130, [WilliamHdd](https://github.com/WilliamHdd)
