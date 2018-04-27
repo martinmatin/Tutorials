@@ -170,6 +170,34 @@ After confirming the settings, you can right-click on the joint to edit the join
 
 
 ## 6. export du design vers plan et/ou slicer    WILL + PUISS
+## Design export as drawing
+One of the main reason you have to make a 3D model before starting the actual build of your project is the ease you get to make 2D plan you can send to a manufacture or use to build the pieces your own. Making this plans will save you a lot of time and material because all the testing of designs is made virtually and not with physical materials you have to buy, cut, test, re-cut , etc... To extract the plans of the design you made right-click on the component you want and select "create drawing".
+![img](../img/mechanical/drawing_start.png)
+
+A window pops up to specify the parts you want to include in the drawing and the format of the destination sheet (**be careful on that**) select the piece and click "ok".
+![img](../img/mechanical/drawing_drop.png)
+
+A widget is automatically created and the component is now attached to your mouse. Notice that in the small window that comes with the widget you can select the view and scale you want to use. After dropping the component and clicking "ok" on the small window your drawing is fully generated and you can start editing it.
+![img](../img/mechanical/drawing_dimension.png)
+
+By hitting the "d" key you can start indicating the dimensions you want to specify. Save to PDF and your done.
+
+## Export 3D design  (3D printing)
+Now comes the fun part: 3D printing your own designs. You'll see that it is really satisfying to see something you designed your own "come to live" in the printer and to do so you will have to export you design as an '.stl' file.
+
+First start by hitting the "make" icon in the top bar.
+![img](../img/mechanical/make_icon.png)
+It will open a window asking you to select the component you want to print and where you want to send the stl file. As you might expect you have to click on the body or component you want to print. As most printers have a accuracy only as good as their nozzle diameter, an assembly will always be printed a one bloc! For that reason we recommend to only select bodies when printing an assembly. It takes more time to print, but is the pieces have to move their is no other way to avoid monolithic prints.
+
+
+Now comes the moment you have to choose between send you design to a facility (and generating an stl file) or print it from your computer and so send it to a slicer software (up studio for the small printer in ECAM's electronic lab, Ultimaker Cura, Repetier-host, etc...).
+![img](../img/mechanical/3Dprint_select_body.png)
+
+To **create an stl file** unselect "Send to 3D print utility" and select ok.
+
+To **3D print it from your computer** select "Send to 3D print utility" and link you slicer software by clicking on the folder icon. When the slicer is linked click "ok" and launch the print form your slicer that will have been open and loaded with the design by Fusion360.
+
+
 
 ## 7. spécificité pour impression 3D     PUISS
               sens de fibres
