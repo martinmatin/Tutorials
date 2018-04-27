@@ -55,7 +55,16 @@ The tools works only in sketch mode and you have to already have a reference lin
 ![img](../img/mechanical/Offset_drag.png)![caca](../img/mechanical/OFFSET_VALUE.png)
 You'll end with the line/shape you selected offset as you wanted.
 ![img](../img/mechanical/Offset_finish.png)
+
 ### Sweep
+Another useful tool to make pipe, slide and so one is the "sweep". Start by doing a sketch on one face. for us it will be two circle.
+![img](../img/mechanical/Sweep_1.png)
+
+Then stop your current sketch. Go to another face. Start a new sketch ("s" and then "sketch"). Use "spine" ("s" and then "spine") and draw a line following as much point as you need.
+![img](../img/mechanical/Sweep_2.png)
+
+You'll be able now to use "Sweep", select the space between the two circle as "profile", select the line as "path" and you'll automatically make a beautiful pipe!
+![img](../img/mechanical/Sweep_3.png)
 
 
 ### Revolve
