@@ -9,36 +9,36 @@ For the «Cortex» robot we used four sensors, one on each side so that’s what
 
 Firstly, in this code we are going to include the same libraries as shown in the Arduino Publisher Tutorial so you can refer to that part for the explanations.
 An additional useful library used for the sensors is the NewPing.h. So here are all the necessary libraries :
-```
+```cpp
 #include <ros.h>
 #include <sensor_msgs/Range.h>
 #include <NewPing.h>
 ```
 Then you have to define the pins for each sensor. In this case, the ultrasound sensor has two pins (Trigger ans Echo). Here is an exemple with the sensor located on the right of the robot:
-```
+```cpp
 #define TRIGGER_PINR  5
 #define ECHO_PINR    4   
 ```
 You also have to specify the maximum distance at which you want the sensor to still be able to detect :
-```
+```cpp
 #define MAX_DISTANCE 300
 ```
 Now as we are using the NewPing library you can simply create an ultrasound sensor object by doing this :
-```
+```cpp
 NewPing sonarR(TRIGGER_PINR, ECHO_PINR, MAX_DISTANCE);
 ```
 where you specify the pins and the maximum distance defined previously.
 
 Moreover as mentioned in the Arduino Publisher Tutorial you specify the type of the ultrasound message and the name you want to assign to it :
-```
+```cpp
 sensor_msgs::Range range_msg_right;
 ```
 You also have to add the following line which has also been explained in the Arduino Publisher Tutorial :
-```
+```cpp
 ros::Publisher pub_range4("ultrasound_right", &range_msg_right);
 ```
 We then have to fill each sonar object with the initialisation information associated :
-```
+```cpp
 range_msg_right.radiation_type = sensor_msgs::Range::ULTRASOUND;
 range_msg_right.header.frame_id =  "ultrasound_right";
 range_msg_right.field_of_view = 0.3665;  // fake
@@ -46,17 +46,17 @@ range_msg_right.min_range = 0.0;
 range_msg_right.max_range = MAX_DISTANCE;
 ```
 Now we can add parts to the void loop of the Arduino code. The most important and useful one specifies the distance to an obstacle :
-```
+```cpp
 range_msg_right.range = tmp/100;
 ```
 We can then publish that information about the distance (you can again refer to the Arduino Publisher Tutorial for the publishing part) :
-```
+```cpp
 pub_range4.publish(&range_msg_right);
 ```
 Here is the whole code for four ultrasound sensors based on the one presented in this link :
 <https://www.youtube.com/watch?v=gm3e-51ohgQ>
 
-```
+```cpp
 #include <ros.h>
 #include <sensor_msgs/Range.h>
 #include <NewPing.h>

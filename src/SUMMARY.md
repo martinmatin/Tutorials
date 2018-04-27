@@ -5,7 +5,7 @@
     - [3D modeling with Fusion360](mechanical/fusion.md)
     - [3D printing](mechanical/3d-print.md)
     - [Mecanum wheels](mechanical/mecanum.md)
-    - [2018 specifics](mechanical/2018/lift.md)
+    - [2018 specifics](mechanical/2018/2018.md)
         - [Block mechanism](mechanical/2018/bigRobot.md)
         - [Ball mechanism](mechanical/2018/balls.md)
 - [Electronics](electronics/electronics.md)
