@@ -69,7 +69,6 @@ You'll be able now to use "Sweep", select the space between the two circle as "p
 
 We used it for example for the [slide](https://a360.co/2Jzo4oP) in the 2018's ball mechanism.
 
-
 ### Revolve
 Revolve allows you to create object as if you turned them on a lathe. It comes in handy to make wheels, cannons, ...
 To used it you have to first create a shape around an axis. When you create that shape, you have to imagine it round. So you only have to draw "a half cut in your future object".
@@ -102,7 +101,6 @@ Circular patterns work in a similar way accept the fact you have to choose a cen
 ![img](img/mechanical/circ_patt_angle.png)
 
 *Note that it's also possible to draw a path and then follow it with our pattern.*
-
 
 ### Mirror
 Available in sketch and also in 3D, the "Mirror" tool is very useful to create quickly two times the same things symmetrically from a line or a plane.
@@ -167,7 +165,7 @@ After confirming the settings, you can right-click on the joint to edit the join
 
  To learn more about jointing component click on the link to Lars's video about that topic <a href=" https://www.youtube.com/watch?v=KQNgIfjMr84">  Fusion 360 Tutorial — How to get a handle on Assembly and Joints in Fusion</a>.
 
-
+<!--
 
 ## 3. Importance: dif bodies vs components       PUISS
       attention séléction du bon compo quand nouveau sketch
@@ -175,9 +173,11 @@ After confirming the settings, you can right-click on the joint to edit the join
 
 ## 4. modification de fichier + stl vers 3D      PUISS
 
+-->
 
-## 6. export du design vers plan et/ou slicer    WILL + PUISS
-## Design export as drawing
+# 6. 3D Design export to plan or 3D Slicer  <!-- WILL + PUISS -->
+
+## 6.1. Design export as drawing
 One of the main reason you have to make a 3D model before starting the actual build of your project is the ease you get to make 2D plan you can send to a manufacture or use to build the pieces your own. Making this plans will save you a lot of time and material because all the testing of designs is made virtually and not with physical materials you have to buy, cut, test, re-cut , etc... To extract the plans of the design you made right-click on the component you want and select "create drawing".
 ![img](img/mechanical/drawing_start.png)
 
@@ -189,7 +189,7 @@ A widget is automatically created and the component is now attached to your mous
 
 By hitting the "d" key you can start indicating the dimensions you want to specify. Save to PDF and your done.
 
-## Export 3D design  (3D printing)
+## 6.2. Export 3D design  (3D printing)
 Now comes the fun part: 3D printing your own designs. You'll see that it is really satisfying to see something you designed your own "come to live" in the printer and to do so you will have to export you design as an '.stl' file.
 
 First start by hitting the "make" icon in the top bar.
@@ -205,7 +205,7 @@ To **create an stl file** unselect "Send to 3D print utility" and select ok.
 To **3D print it from your computer** select "Send to 3D print utility" and link you slicer software by clicking on the folder icon. When the slicer is linked click "ok" and launch the print form your slicer that will have been open and loaded with the design by Fusion360.
 
 
-
+<!--
 ## 7. spécificité pour impression 3D     PUISS
               sens de fibres
               penser support et nettoyage de support
@@ -215,7 +215,7 @@ To **3D print it from your computer** select "Send to 3D print utility" and link
 ## 8. parametre d'impression et défaut d'impression      PUISS
 
 ## 9. tour de marché sur les différentes imprimantes sur le marché      PUISS + WILL
-
+-->
 
 ## Contributors
 - Puissant Baeyens Victor, 12098, [MisterTarock](https://github.com/MisterTarock)

@@ -5,7 +5,7 @@
 
 --------3/ synthèse de fct principale et guide des fct utiles non expliquées  WILL + PUIS
 
-    fct: offset, sweep, apparence, pattern, mirror, fillet, chamfer, join
+                fct: offset, sweep, apparence, pattern, mirror, fillet, chamfer, join
 
 4/ Importance: dif bodies vs components       PUISS
               attention séléction du bon compo quand nouveau sketch
