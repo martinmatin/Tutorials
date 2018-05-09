@@ -1,7 +1,5 @@
-
 # Sonar #
 
-<<<<<<< HEAD
 A sonar is a sensor allowing you to measure the distance to an obstacle thanks to high frequency waves. To keep correct measured values it is better to use the sensor we chose between 2cm and 400cm. The model of our sonar is HC-SR04. There are 4 pins on this sensor : TRIG, ECHO, VCC and GND (as you can see on the picture below).
 
 ![img](img/electronics/sonar/HCSR04.png)
@@ -34,9 +32,6 @@ Images references :
 <https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/>
 
 # Tutorial #
-=======
-This is a draft of the tutorial, not the last version so all the instructions are not here yet.
->>>>>>> 063c44b9c385e6caf1bd4886b8e7e41452181521
 
 This tutorial explains the code to use and transfer sonar sensors information with ROS.
 
