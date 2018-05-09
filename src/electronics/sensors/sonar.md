@@ -85,6 +85,7 @@ pub_range4.publish(&range_msg_right);
 ```
 Here is the whole code for four ultrasound sensors based on the one presented in this link :
 <https://www.youtube.com/watch?v=gm3e-51ohgQ>
+Moreover the code below is available in the Github repo of Eurobot : <https://github.com/Ecam-Eurobot/Eurobot-2018/blob/ultrasound/arduino/sonar.ino>
 
 ```cpp
 #include <ros.h>
