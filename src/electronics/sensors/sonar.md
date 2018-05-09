@@ -1,4 +1,3 @@
-
 # Sonar #
 
 A sonar is a sensor allowing you to measure the distance to an obstacle thanks to high frequency waves. To keep correct measured values it is better to use the sensor we chose between 2cm and 400cm. The model of our sonar is HC-SR04. There are 4 pins on this sensor : TRIG, ECHO, VCC and GND (as you can see on the picture below).
