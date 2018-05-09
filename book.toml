@@ -3,3 +3,6 @@ authors = ["Mathieu David"]
 multilingual = false
 src = "src"
 title = "Ecam Eurobot"
+
+[output.html]
+mathjax-support = true
