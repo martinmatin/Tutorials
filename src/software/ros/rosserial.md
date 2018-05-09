@@ -41,3 +41,35 @@ sudo apt-get install -y \
                 ros-kinetic-rosserial-arduino \
                 ros-kinetic-rosserial
 ```
+
+
+## Rosserial simple test
+
+To test if you receive the messages published by the Arduino on the Rasperry Pi you have to do the following :
+
+To test it you first have to connect the Arduino board to the Raspberry. To do so you can simply connect them with the serial Arduino cable to the Raspberry USB port as shown on the figure below.  
+
+![img](img/software/ros/arduino/rasp_arduino_connection.png)
+
+Then you launch the terminal and execute the following commands : 
+
+on a first window you type : 
+```
+roscore
+```
+
+on another window : 
+```
+rosrun rosserial_python serial_node.py /dev/ttyUSB0 
+```
+/dev/ttyUSB0 is the usb port the Arduino is connected to so you’ll have to change the «USB0». You can find the name of the port tty* in the Arduino IDE or you can find it in the terminal by typing :
+```
+ls /dev/tty*
+```
+when you plug the Arduino in the Raspberry port, you can execute this previous command to see which port has been added and thus know which one is the Arduino board.
+
+Finally you can see what the Arduino is publishing on the topic of one of the ultrasound sensors, for example we will try here with the right ultrasound. You can see it by typing on another terminal window :
+
+```
+rostopic echo /ultrasound_right
+```
