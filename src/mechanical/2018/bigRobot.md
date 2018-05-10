@@ -4,7 +4,9 @@
 
 The entire robot is designed in Fusion 360 and is available on the Eurobot cloud. The final version is called **SHARK FINAL V17**
 
-## Parts
+
+
+## External parts
 
 Most of the part are home made (CNC, 3D printing) but some parts a bought on the market :
 
@@ -22,3 +24,7 @@ Most of the part are home made (CNC, 3D printing) but some parts a bought on the
 
 * **Limit switch**
   * Snap Action Limit Switch, Roller Lever, Thermoplastic, NC, 125V
+  
+  
+## Sections 
+
