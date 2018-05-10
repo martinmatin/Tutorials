@@ -92,5 +92,9 @@ Most of the part are home made (CNC, 3D printing) but some parts a bought on the
   * Snap Action Limit Switch, Roller Lever, Thermoplastic, NC, 125V
   
   
+  # Author
+  
+  Crappe Martin
+  
 
 
