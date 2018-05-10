@@ -85,7 +85,9 @@ pub_range4.publish(&range_msg_right);
 ```
 Here is the whole code for four ultrasound sensors based on the one presented in this link :
 <https://www.youtube.com/watch?v=gm3e-51ohgQ>  
-Moreover the code below is available in the Github repo of Ecam Eurobot : <https://github.com/Ecam-Eurobot/Eurobot-2018/blob/ultrasound/arduino/sonar.ino>
+Moreover the code below is available in the Github repo of Ecam Eurobot : <https://github.com/Ecam-Eurobot/Eurobot-2018/blob/ultrasound/arduino/sonar.ino>  
+
+You can find the tutorial in the Software chapter, ROS and Arduino part to test if you succesfully receive information from the sonar with rosserial.
 
 ```cpp
 #include <ros.h>
