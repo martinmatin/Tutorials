@@ -43,18 +43,18 @@ sudo apt-get install -y \
 ```
 
 
-## Rosserial simple test
+## Rosserial sonar simple test
 
-To test if you receive the messages published by the Arduino on the Rasperry Pi you have to do the following :
-
-To test it you first have to connect the Arduino board to the Raspberry. To do so you can simply connect them with the serial Arduino cable to the Raspberry USB port as shown on the figure below.  
+To test if you receive the messages published by the Arduino on the Rasperry Pi you have to do the following :  
+To test it you first have to upload the code you can find at the end of this tutorial (which you can also find on the Github repo of the Ecam Eurobot : <https://github.com/Ecam-Eurobot/Eurobot-2018/blob/ultrasound/arduino/sonar.ino>). If you need further information and explanations for this code, you can refer to the Sonar Sensor Tutorial in the Electronics part. You can also use that tutorial for the wiring of the sonar on your Arduino. Of course you have to choose the pin numbers so they correspond to the ones declared in the code previously mentionned or you can directly change in the code the pin numbers yourself.  
+Then you have to connect the Arduino board to the Raspberry. To do so you can simply connect them with the serial Arduino cable to the Raspberry USB port as shown on the figure below.  
 
 ![img](img/software/ros/arduino/rasp_arduino_connection.png)
 
 Image reference :  
 <http://www.instructables.com/id/Raspberry-Pi-Arduino-Serial-Communication/>
 
-Then you launch the terminal and execute the following commands : 
+After that, you have to launch the terminal and execute the following commands : 
 
 on a first window you type : 
 ```
@@ -75,4 +75,115 @@ Finally you can see what the Arduino is publishing on the topic of one of the ul
 
 ```
 rostopic echo /ultrasound_right
+```
+
+**Code to upload on the Arduino before launching rosserial :**
+
+```cpp
+#include <ros.h>
+#include <sensor_msgs/Range.h>
+#include <NewPing.h>
+
+#define TRIGGER_PINR  5   //back
+#define ECHO_PINR    4   
+
+#define TRIGGER_PINL  7   //front
+#define ECHO_PINL     6  
+
+#define TRIGGER_PINB  12   //left
+#define ECHO_PINB     13 
+
+#define TRIGGER_PINF  11   //right
+#define ECHO_PINF     10 
+
+#define MAX_DISTANCE 300 // Maximum distance we want to ping  
+
+NewPing sonarL(TRIGGER_PINL, ECHO_PINL, MAX_DISTANCE); // back us 
+NewPing sonarR(TRIGGER_PINR, ECHO_PINR, MAX_DISTANCE); // front us
+NewPing sonarB(TRIGGER_PINB, ECHO_PINB, MAX_DISTANCE); // left us
+NewPing sonarF(TRIGGER_PINF, ECHO_PINF, MAX_DISTANCE); // right us
+
+ros::NodeHandle  nh;
+
+sensor_msgs::Range range_msg_rear;
+sensor_msgs::Range range_msg_front;
+sensor_msgs::Range range_msg_left;
+sensor_msgs::Range range_msg_right;
+ros::Publisher pub_range1("ultrasound_rear", &range_msg_rear);
+ros::Publisher pub_range2("ultrasound_front", &range_msg_front);
+ros::Publisher pub_range3("ultrasound_left", &range_msg_left);
+ros::Publisher pub_range4("ultrasound_right", &range_msg_right);
+ 
+
+char frameid[] = "base_link";
+
+long duration;
+ float tmp;
+
+void setup()
+{
+  nh.initNode();
+  nh.advertise(pub_range1);
+  nh.advertise(pub_range2);
+  nh.advertise(pub_range3);
+  nh.advertise(pub_range4);
+
+  range_msg_rear.radiation_type = sensor_msgs::Range::ULTRASOUND;
+  range_msg_rear.header.frame_id =  "ultrasound_rear";
+  range_msg_rear.field_of_view = 0.3665;  // fake
+  range_msg_rear.min_range = 0.0;
+  range_msg_rear.max_range = MAX_DISTANCE;
+  
+  range_msg_front.radiation_type = sensor_msgs::Range::ULTRASOUND;
+  range_msg_front.header.frame_id =  "ultrasound_front";
+  range_msg_front.field_of_view = 0.3665;  // fake
+  range_msg_front.min_range = 0.0;
+  range_msg_front.max_range = MAX_DISTANCE; 
+   
+  range_msg_left.radiation_type = sensor_msgs::Range::ULTRASOUND;
+  range_msg_left.header.frame_id =  "ultrasound_front";
+  range_msg_left.field_of_view = 0.3665;  // fake
+  range_msg_left.min_range = 0.0;
+  range_msg_left.max_range = MAX_DISTANCE;  
+  
+  range_msg_right.radiation_type = sensor_msgs::Range::ULTRASOUND;
+  range_msg_right.header.frame_id =  "ultrasound_right";
+  range_msg_right.field_of_view = 0.3665;  // fake
+  range_msg_right.min_range = 0.0;
+  range_msg_right.max_range = MAX_DISTANCE;
+}
+
+long range_time;
+
+void loop()
+{
+  //publish the adc value every 50 milliseconds
+  //since it takes that long for the sensor to stabilize
+  if ( millis() >= range_time ){
+    tmp=sonarL.ping_cm();
+    range_msg_rear.range = tmp/100;
+    range_msg_rear.header.stamp = nh.now();
+    pub_range1.publish(&range_msg_rear);
+
+    tmp=sonarR.ping_cm();
+    range_msg_front.range = tmp/100;
+    range_msg_front.header.stamp = nh.now();
+    pub_range2.publish(&range_msg_front);
+    
+     tmp=sonarB.ping_cm();
+    range_msg_left.range = tmp/100;
+    range_msg_left.header.stamp = nh.now();
+    pub_range2.publish(&range_msg_left);
+
+    tmp=sonarF.ping_cm();
+    range_msg_right.range = tmp/100;
+    range_msg_right.header.stamp = nh.now();
+    pub_range4.publish(&range_msg_right);
+
+    range_time =  millis() + 50;
+  }
+  nh.spinOnce();
+}
+
+
 ```
