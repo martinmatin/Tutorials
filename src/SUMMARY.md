@@ -27,6 +27,7 @@
             - [Packages](software/ros/basics/packages.md)
             - [Publisher](software/ros/basics/pub.md)
             - [Subscriber](software/ros/basics/sub.md)
+            - [Example](software/ros/basics/example.md)
             - [Launchfiles](software/ros/basics/launch.md)
             - [ROS parameters](software/ros/basics/params.md)
         - [ROS and Arduino](software/ros/rosserial.md)
