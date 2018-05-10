@@ -4,6 +4,8 @@
 
 The entire robot is designed in Fusion 360 and is available on the Eurobot cloud. The final version is called **SHARK FINAL V17**
 
+Here is the link to download de fusion projet : [BigRobotModel](https://a360.co/2wA0er0)
+
 
 
 ## External parts
