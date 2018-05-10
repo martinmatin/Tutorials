@@ -6,6 +6,21 @@ The entire robot is designed in Fusion 360 and is available on the Eurobot cloud
 
 Here is the link to download de fusion projet : [BigRobotModel](https://a360.co/2wA0er0)
 
+## Sections ( How does it works ?)
+
+This paragraph explains the differents conceptoins's steps.
+
+### The base
+
+![alt text](mechanical/2018/bigRobotSrc/base_render.jpg)
+
+This is the firts I'm going to talk about but it was the last designed part. Indeed, every parts had to be modeled to know the constraints and dimensions. Thoses informations where essentials to design the base.
+
+#### Difficulties
+The robot is made of two sides joined together to let the cubes enter in the middle. The diffuclty was to join them with enough stren
+The "face" is designed to join the 
+
+
 
 
 ## External parts
@@ -28,5 +43,5 @@ Most of the part are home made (CNC, 3D printing) but some parts a bought on the
   * Snap Action Limit Switch, Roller Lever, Thermoplastic, NC, 125V
   
   
-## Sections 
+
 
