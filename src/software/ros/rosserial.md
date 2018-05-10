@@ -51,6 +51,9 @@ To test it you first have to connect the Arduino board to the Raspberry. To do s
 
 ![img](img/software/ros/arduino/rasp_arduino_connection.png)
 
+Image reference :  
+<http://www.instructables.com/id/Raspberry-Pi-Arduino-Serial-Communication/>
+
 Then you launch the terminal and execute the following commands : 
 
 on a first window you type : 
