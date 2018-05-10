@@ -20,19 +20,19 @@ The team earns a lot a point if it respects the construction plan shown on the w
 
 ## Sections ( How does it work ?)
 
-This paragraph explains the differents conceptions's steps all the sections needed to build a tower. Here is the general flow diagram :
+This paragraph explains the differents conceptions's steps and all the parts needed to build a tower. Here is the general flow diagram :
 
 ![alt text](mechanical/2018/bigRobotSrc/flow_diagram.PNG)
 
 
-The system doesn't need any color detector because all the stars of cubes are always in the same order in the same direction.
+The system doesn't need any color detection because all the stars of cubes are always in the same order in the same direction.
 
 
 ### The base
 
 ![alt text](mechanical/2018/bigRobotSrc/base_render.jpg)
 
-This is the firt thing I'm going to talk about but it was the last designed part. Indeed, every parts had to be modeled to know the constraints and dimensions. Thoses informations where essentials to design the base.
+This is the firt thing I'm going to talk about but it was the last designed part. Indeed, every part had to be designed to know the constraints and dimensions. Thoses informations where essentials to design the base.
 
 After the design in Fusion 360 in the model environment, the design was imported to the CAM environment still in Fusion.
 
@@ -67,7 +67,7 @@ To detect when the cube is in the lift, the robot uses a limit switch available 
 
 ![alt text](mechanical/2018/bigRobotSrc/cage.jpg)
 
-The floors can ratate thanks to a dynamixel and a bearing wheel. To place the bearing wheel on the rotating axis we insert the last floor with the others floors with the bearing wheel between them as shown in the next figure :
+The floors can rotate thanks to a dynamixel and a bearing wheel. To place the bearing wheel on the rotating axis we insert the last floor into the others floors with the bearing wheel between them as shown in the next figure :
 
 ![alt text](mechanical/2018/bigRobotSrc/cage_assembly.PNG)
 
