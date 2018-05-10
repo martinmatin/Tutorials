@@ -22,6 +22,7 @@ The fonts are available on https://dafont.com
 ## The polo
 
 The polo were manufactured by *4eme dimensions* : http://www.4dimension.be/.
+
 The vector file is available here : XXX
 
 ## The poster
@@ -29,6 +30,7 @@ The vector file is available here : XXX
 ![alt text](graphic/poster_rendu.png)
 
 The poster was printed by *Graphoprint-services-europe*  in A0.
+
 The vector file is available here :
 
 ## Files
