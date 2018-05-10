@@ -19,7 +19,7 @@ def talker():
     rospy.init_node('controller', anonymous=True)
     rate = rospy.Rate(1)
     while not rospy.is_shutdown():
-        count++
+        count += 1
         pub.publish(count)
         rate.sleep()
 
